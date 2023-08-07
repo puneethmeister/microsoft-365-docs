@@ -1,15 +1,17 @@
 ---
 title: "Subscriptions, licenses, accounts, and tenants for Microsoft's cloud offerings"
-ms.author: josephd
-author: JoeDavies-MSFT
-manager: laurawi
+ms.author: kvice
+author: kelleyvice-msft
+manager: scotv
+ms.date: 08/10/2020
 audience: ITPro
 ms.topic: conceptual
-ms.service: o365-solutions
-localization_priority: Priority
+ms.service: microsoft-365-enterprise
+ms.localizationpriority: high
 search.appverid:
 - MET150
 ms.collection: 
+- scotvorg
 - Ent_O365
 - Strat_O365_Enterprise
 - m365initiative-coredeploy
@@ -83,7 +85,7 @@ Figure 3 shows an example of multiple subscriptions of an organization using a c
   
 ### Tenants
 
-For SaaS cloud offerings, the tenant is the regional location that houses the servers providing cloud services. For example, the Contoso Corporation chose the European region to host its Microsoft 365, EMS, and Dynamics 365 tenants for the 15,000 workers in their Paris headquarters.
+For SaaS cloud offerings, the tenant is the regional location that houses the servers providing cloud services. For example, the Contoso Corporation chose the European region to host its Microsoft 365, EMS, and Dynamics 365 subscriptions for the 15,000 workers in their Paris headquarters.
   
 Azure PaaS services and virtual machine-based workloads hosted in Azure IaaS can have tenancy in any Azure datacenter across the world. You specify the Azure datacenter, known as the location, when you create the Azure PaaS app or service or element of an IaaS workload.
   
@@ -135,7 +137,7 @@ The following table describes how you can combine multiple Microsoft cloud offer
    
 An easy way to add subscriptions to your organization for Microsoft SaaS-based services is through the admin center:
   
-1. Sign in to the Microsoft 365 admin center ([https://admin.microsoft.com](https://admin.microsoft.com)) with your global administrator account.
+1. Sign in to the Microsoft 365 admin center ([https://admin.microsoft.com](https://admin.microsoft.com)) with your **User Admin**, or **Global admin** account.
     
 2. From the left navigation of the **Admin center** home page, click **Billing**, and then **Purchase services**.
     
@@ -145,7 +147,7 @@ The admin center assigns the organization and Azure AD tenant of your Microsoft 
   
 To add an Azure subscription with the same organization and Azure AD tenant as your Microsoft 365 subscription:
   
-1. Sign in to the Azure portal ([https://portal.azure.com](https://portal.azure.com)) with your Microsoft 365 global administrator account.
+1. Sign in to the Azure portal ([https://portal.azure.com](https://portal.azure.com)) with your Microsoft 365 **Azure AD DC admin**, or **Global admin** account.
     
 2. In the left navigation, click **Subscriptions**, and then click **Add**.
     

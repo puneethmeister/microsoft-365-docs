@@ -1,10 +1,11 @@
 ---
 title: FileProfile() function in advanced hunting for Microsoft 365 Defender
 description: Learn how to use the FileProfile() to enrich information about files in your advanced hunting query results
-keywords: advanced hunting, threat hunting, cyber threat hunting, microsoft threat protection, microsoft 365, mtp, m365, search, query, telemetry, schema reference, kusto, FileProfile, file profile, function, enrichment
+keywords: advanced hunting, threat hunting, cyber threat hunting, Microsoft 365 Defender, microsoft 365, m365, search, query, telemetry, schema reference, kusto, FileProfile, file profile, function, enrichment
 search.product: eADQiWindows 10XVcnh
 search.appverid: met150
-ms.prod: m365-security
+ms.service: microsoft-365-security
+ms.subservice: m365d
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
@@ -12,14 +13,14 @@ f1.keywords:
   - NOCSH
 ms.author: maccruz
 author: schmurky
-localization_priority: Normal
+ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
 ms.collection: 
-  - M365-security-compliance
-  - m365initiative-m365-defender
-ms.topic: article
-ms.technology: m365d
+- m365-security
+- tier3
+ms.topic: conceptual
+ms.date: 02/16/2021
 ---
 
 # FileProfile()
@@ -34,23 +35,27 @@ The `FileProfile()` function is an enrichment function in [advanced hunting](adv
 
 | Column | Data type | Description |
 |------------|---------------|-------------|
-| `SHA1` | string | SHA-1 of the file that the recorded action was applied to |
-| `SHA256` | string | SHA-256 of the file that the recorded action was applied to |
-| `MD5` | string | MD5 hash of the file that the recorded action was applied to |
-| `FileSize` | int | Size of the file in bytes |
-| `GlobalPrevalence` | int | Number of instances of the entity observed by Microsoft globally |
-| `GlobalFirstSeen` | datetime | Date and time when the entity was first observed by Microsoft globally |
-| `GlobalLastSeen` | datetime | Date and time when the entity was last observed by Microsoft globally |
-| `Signer` | string | Information about the signer of the file |
-| `Issuer` | string | Information about the issuing certificate authority (CA) |
-| `SignerHash` | string | Unique hash value identifying the signer |
-| `IsCertificateValid` | boolean | Whether the certificate used to sign the file is valid |
-| `IsRootSignerMicrosoft` | boolean | Indicates whether the signer of the root certificate is Microsoft |
-| `SignatureState` | string | State of the file signature: SignedValid - the file is signed with a valid signature, SignedInvalid - the file is signed but the certificate is invalid, Unsigned - the file is not signed, Unknown - information about the file cannot be retrieved
-| `IsExecutable` | boolean | Whether the file is a Portable Executable (PE) file |
-| `ThreatName` | string | Detection name for any malware or other threats found |
-| `Publisher` | string | Name of the organization that published the file |
-| `SoftwareName` | string | Name of the software product |
+| `SHA1` | `string` | SHA-1 of the file that the recorded action was applied to |
+| `SHA256` | `string` | SHA-256 of the file that the recorded action was applied to |
+| `MD5` | `string` | MD5 hash of the file that the recorded action was applied to |
+| `FileSize` | `int` | Size of the file in bytes |
+| `GlobalPrevalence` | `int` | Number of instances of the entity observed by Microsoft globally |
+| `GlobalFirstSeen` | `datetime` | Date and time when the entity was first observed by Microsoft globally |
+| `GlobalLastSeen` | `datetime` | Date and time when the entity was last observed by Microsoft globally |
+| `Signer` | `string` | Information about the signer of the file |
+| `Issuer` | `string` | Information about the issuing certificate authority (CA) |
+| `SignerHash` | `string` | Unique hash value identifying the signer |
+| `IsCertificateValid` | `boolean` | Whether the certificate used to sign the file is valid |
+| `IsRootSignerMicrosoft` | `boolean` | Indicates whether the signer of the root certificate is Microsoft and the file is built in to Windows OS |
+| `SignatureState` | `string` | State of the file signature: SignedValid - the file is signed with a valid signature, SignedInvalid - the file is signed but the certificate is invalid, Unsigned - the file isn't signed, Unknown - information about the file can't be retrieved
+| `IsExecutable` | `boolean` | Whether the file is a Portable Executable (PE) file |
+| `ThreatName` | `string` | Detection name for any malware or other threats found |
+| `Publisher` | `string` | Name of the organization that published the file |
+| `SoftwareName` | `string` | Name of the software product |
+| `ProfileAvailability` | `string` | Indicates the availability status of the profile data for the file: Available - profile was successfully queried and file data returned, Missing - profile was successfully queried but no file info was found, Error - error in querying the file info or maximum allotted time was exceeded before query could be completed, or an empty value - if file ID is invalid or the maximum number of files was reached |
+
+
+
 
 ## Syntax
 
@@ -64,7 +69,7 @@ invoke FileProfile(x,y)
 - **y**—limit to the number of records to enrich, 1-1000; function uses 100 if unspecified
 
 
->[!TIP]
+> [!TIP]
 > Enrichment functions will show supplemental information only when they are available. Availability of information is varied and depends on a lot of factors. Make sure to consider this when using FileProfile() in your queries or in creating custom detections. For best results, we recommend using the FileProfile() function with SHA1.
 
 ## Examples
@@ -94,3 +99,4 @@ DeviceFileEvents
 - [Learn the query language](advanced-hunting-query-language.md)
 - [Understand the schema](advanced-hunting-schema-tables.md)
 - [Get more query examples](advanced-hunting-shared-queries.md)
+[!INCLUDE [Microsoft 365 Defender rebranding](../../includes/defender-m3d-techcommunity.md)]

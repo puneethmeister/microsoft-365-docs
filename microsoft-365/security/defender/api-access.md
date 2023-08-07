@@ -3,7 +3,8 @@ title: Access the Microsoft 365 Defender APIs
 description: Learn how to access the Microsoft 365 Defender APIs
 keywords: access, apis, application context, user context, aad application, access token
 search.product: eADQiWindows 10XVcnh
-ms.prod: m365-security
+ms.service: microsoft-365-security
+ms.subservice: m365d
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
@@ -11,15 +12,19 @@ f1.keywords:
   - NOCSH
 ms.author: macapara
 author: mjcaparas
-localization_priority: Normal
+ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
-ms.collection: M365-security-compliance
-ms.topic: conceptual
+ms.collection: 
+ - m365-security
+ - tier3
+ - must-keep
+ms.topic: reference
 search.appverid: 
   - MOE150
   - MET150
-ms.technology: m365d
+ms.custom: api
+ms.date: 02/08/2023
 ---
 
 # Access the Microsoft 365 Defender APIs
@@ -29,6 +34,9 @@ ms.technology: m365d
 **Applies to:**
 
 - Microsoft 365 Defender
+
+> [!NOTE]
+> **Try our new APIs using MS Graph security API**. Find out more at: [Use the Microsoft Graph security API - Microsoft Graph | Microsoft Learn](/graph/api/resources/security-api-overview).
 
 > [!IMPORTANT]
 > Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
@@ -54,7 +62,7 @@ Use this context for apps that run without a signed-in user present, such as bac
 2. Assign the desired permissions to the application.
 3. Create a key for the application.
 4. Get a security token using the application and its key.
-5. Use the token to access  Microsoft 365 Defender API.
+5. Use the token to access the Microsoft 365 Defender API.
 
 For more information, see **[Create an app to access Microsoft 365 Defender without a user](api-create-app-web.md)**.
 
@@ -65,7 +73,7 @@ Use this context to perform actions on behalf of a single user.
 1. Create an Azure Active Directory native application.
 2. Assign the desired permission to the application.
 3. Get a security token using the user credentials for the application.
-4. Use the token to access  Microsoft 365 Defender API.
+4. Use the token to access the Microsoft 365 Defender API.
 
 For more information, see **[Create an app to access Microsoft 365 Defender APIs on behalf of a user](api-create-app-user-context.md)**.
 
@@ -77,13 +85,16 @@ Use this context when you need to provide an app to many users across [multiple 
 2. Assign the desired permission to the application.
 3. Get [admin consent](/azure/active-directory/develop/v2-permissions-and-consent#requesting-consent-for-an-entire-tenant) for the app from each tenant.
 4. Get a security token using user credentials based on a customer's tenant ID.
-5. Use the token to access  Microsoft 365 Defender API.
+5. Use the token to access the Microsoft 365 Defender API.
 
 For more information, see **[Create an app with partner access to Microsoft 365 Defender APIs](api-partner-access.md)**.
 
 ## Related articles
 
+- [Use the Microsoft Graph security API - Microsoft Graph | Microsoft Learn](/graph/api/resources/security-api-overview)
+
 - [Microsoft 365 Defender APIs overview](api-overview.md)
 - [OAuth 2.0 authorization for user sign in and API access](/azure/active-directory/develop/active-directory-v2-protocols-oauth-code)
-- [Manage secrets in your server apps with Azure Key Vault](/learn/modules/manage-secrets-with-azure-key-vault/)
+- [Manage secrets in your server apps with Azure Key Vault](/training/modules/manage-secrets-with-azure-key-vault/)
 - [Create a 'Hello world' application that accesses the Microsoft 365 APIs](api-hello-world.md)
+[!INCLUDE [Microsoft 365 Defender rebranding](../../includes/defender-m3d-techcommunity.md)]

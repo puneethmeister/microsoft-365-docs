@@ -5,51 +5,39 @@ f1.keywords:
 ms.author: sharik
 author: SKjerland
 manager: scotv
+ms.date: 02/18/2020
 audience: Admin
 ms.topic: article
-ms.service: o365-administration
-localization_priority: Normal
+ms.service: microsoft-365-business
+ms.localizationpriority: medium
 ms.collection: 
+- Tier2
+- scotvorg
 - M365-subscription-management
 - Adm_O365
 - Adm_TOC
 ms.custom:
 - MSStore_Link
 - AdminSurgePortfolio
+- AdminTemplateSet
 search.appverid:
 - BCS160
 - MET150
 - MOE150
-description: "After you have created a shared mailbox, you'll want to configure some settings for its users, such as email forwarding and automatic replies. Later, you might want to change other settings, such as the mailbox name or members."
+description: "Create a shared mailbox and configure some settings for its users, such as email forwarding and automatic replies."
 ---
 
-# Configure shared mailbox settings
+# Configure Microsoft 365 shared mailbox settings
 
 After you have [created a shared mailbox](create-a-shared-mailbox.md), you'll want to configure some settings for the mailbox users, such as email forwarding and automatic replies. Later, you might want to change other settings, such as the mailbox name, members, or member permissions. 
 
 ## Change the name or email alias of a shared mailbox, or change the primary email address
 
-::: moniker range="o365-worldwide"
+1. In the admin center, go to **Teams & groups** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=2066847" target="_blank">Shared mailboxes</a>.
 
-1. In the admin center, go to the **Groups** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=2066847" target="_blank">Shared mailboxes</a> page.
+2. Select the shared mailbox you want to edit, and then select either **Edit name** or **Edit email addresses**.
 
-::: moniker-end 
-
-::: moniker range="o365-germany"
-
-1. In the <a href="https://go.microsoft.com/fwlink/p/?linkid=848041" target="_blank">admin center</a>, go to the **Groups** > **Shared mailboxes** page. 
-
-::: moniker-end
-
-::: moniker range="o365-21vianet"
-
-1. In the <a href="https://go.microsoft.com/fwlink/p/?linkid=850627" target="_blank">admin center</a>, go to the **Groups** > **Shared mailboxes** page. 
-
-::: moniker-end
-
-2. Select the shared mailbox you want to edit, and then select **Edit** next to **Name, Email, Email aliases**.
-
-3. Enter a new name, or add another alias. If you want to change the primary email address, your mailbox must have more than one email alias.
+3. Enter a new name for the shared mailbox, or add another email alias. If you want to change the primary email address, your mailbox must have more than one email alias.
 
 4. Select **Save**.
 
@@ -57,23 +45,7 @@ After you have [created a shared mailbox](create-a-shared-mailbox.md), you'll wa
 
 You do not need to assign a license to the shared mailbox in order to forward email that's sent to it. You can forward the messages to any valid email address or distribution list.
 
-::: moniker range="o365-worldwide"
-
-1. In the admin center, go to the **Groups** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=2066847" target="_blank">Shared mailboxes</a> page.
-
-::: moniker-end 
-
-::: moniker range="o365-germany"
-
-1. In the <a href="https://go.microsoft.com/fwlink/p/?linkid=848041" target="_blank">admin center</a>, go to the **Groups** > **Shared mailboxes** page. 
-
-::: moniker-end
-
-::: moniker range="o365-21vianet"
-
-1. In the <a href="https://go.microsoft.com/fwlink/p/?linkid=850627" target="_blank">admin center</a>, go to the **Groups** > **Shared mailboxes** page. 
-
-::: moniker-end
+1. In the admin center, go to **Teams & groups** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=2066847" target="_blank">Shared mailboxes</a>.
 
 2. Select the shared mailbox you want to edit, then select **Email forwarding** \> **Edit**.
     
@@ -83,23 +55,7 @@ You do not need to assign a license to the shared mailbox in order to forward em
 
 ## Send automatic replies from a shared mailbox
 
-::: moniker range="o365-worldwide"
-
-1. In the admin center, go to the **Groups** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=2066847" target="_blank">Shared mailboxes</a> page.
-
-::: moniker-end 
-
-::: moniker range="o365-germany"
-
-1. In the <a href="https://go.microsoft.com/fwlink/p/?linkid=848041" target="_blank">admin center</a>, go to the **Groups** > **Shared mailboxes** page. 
-
-::: moniker-end
-
-::: moniker range="o365-21vianet"
-
-1. In the <a href="https://go.microsoft.com/fwlink/p/?linkid=850627" target="_blank">admin center</a>, go to the **Groups** > **Shared mailboxes** page. 
-
-::: moniker-end
+1. In the admin center, go to **Teams & groups** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=2066847" target="_blank">Shared mailboxes</a>.
 
 2. Select the shared mailbox you want to edit, then select **Automatic replies** \> **Edit**.
     
@@ -120,23 +76,7 @@ If you want to allow everyone to see the Sent email, in the admin center, edit t
 
 ## Choose the apps that a shared mailbox can use to access Microsoft email
 
-::: moniker range="o365-worldwide"
-
-1. In the admin center, go to the **Groups** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=2066847" target="_blank">Shared mailboxes</a> page.
-
-::: moniker-end 
-
-::: moniker range="o365-germany"
-
-1. In the <a href="https://go.microsoft.com/fwlink/p/?linkid=848041" target="_blank">admin center</a>, go to the **Groups** > **Shared mailboxes** page. 
-
-::: moniker-end
-
-::: moniker range="o365-21vianet"
-
-1. In the <a href="https://go.microsoft.com/fwlink/p/?linkid=850627" target="_blank">admin center</a>, go to the **Groups** > **Shared mailboxes** page. 
-
-::: moniker-end
+1. In the admin center, go to **Teams & groups** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=2066847" target="_blank">Shared mailboxes</a>.
 
 2. Select the shared mailbox you want to edit, then select **Email apps** \> **Edit**.
 
@@ -147,25 +87,9 @@ If you want to allow everyone to see the Sent email, in the admin center, edit t
 
 ## Put a shared mailbox on litigation hold
 
-To learn more about litigation hold, see [Create a Litigation Hold](../../compliance/create-a-litigation-hold.md).
+To learn more about litigation hold, see [Create a Litigation Hold](../../compliance/ediscovery-create-a-litigation-hold.md).
 
-::: moniker range="o365-worldwide"
-
-1. In the admin center, go to the **Groups** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=2066847" target="_blank">Shared mailboxes</a> page.
-
-::: moniker-end 
-
-::: moniker range="o365-germany"
-
-1. In the <a href="https://go.microsoft.com/fwlink/p/?linkid=848041" target="_blank">admin center</a>, go to the **Groups** > **Shared mailboxes** page. 
-
-::: moniker-end
-
-::: moniker range="o365-21vianet"
-
-1. In the <a href="https://go.microsoft.com/fwlink/p/?linkid=850627" target="_blank">admin center</a>, go to the **Groups** > **Shared mailboxes** page. 
-
-::: moniker-end
+1. In the admin center, go to **Teams & groups** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=2066847" target="_blank">Shared mailboxes</a>.
 
 2. Select the shared mailbox you want to edit, then select **Litigation hold** \> **Edit**.
 
@@ -178,23 +102,7 @@ To learn more about litigation hold, see [Create a Litigation Hold](../../compli
 
 ## Add or remove members
 
-::: moniker range="o365-worldwide"
-
-1. In the admin center, go to the **Groups** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=2066847" target="_blank">Shared mailboxes</a> page.
-
-::: moniker-end 
-
-::: moniker range="o365-germany"
-
-1. In the <a href="https://go.microsoft.com/fwlink/p/?linkid=848041" target="_blank">admin center</a>, go to the **Groups** > **Shared mailboxes** page. 
-
-::: moniker-end
-
-::: moniker range="o365-21vianet"
-
-1. In the <a href="https://go.microsoft.com/fwlink/p/?linkid=850627" target="_blank">admin center</a>, go to the **Groups** > **Shared mailboxes** page. 
-
-::: moniker-end
+1. In the admin center, go to **Teams & groups** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=2066847" target="_blank">Shared mailboxes</a>.
 
 2. Select the shared mailbox you want to edit, then select **Members** \> **Edit**.
 
@@ -206,23 +114,7 @@ To learn more about litigation hold, see [Create a Litigation Hold](../../compli
 
 ## Add or remove permissions of members
 
-::: moniker range="o365-worldwide"
-
-1. In the admin center, go to the **Groups** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=2066847" target="_blank">Shared mailboxes</a> page.
-
-::: moniker-end 
-
-::: moniker range="o365-germany"
-
-1. In the <a href="https://go.microsoft.com/fwlink/p/?linkid=848041" target="_blank">admin center</a>, go to the **Groups** > **Shared mailboxes** page. 
-
-::: moniker-end
-
-::: moniker range="o365-21vianet"
-
-1. In the <a href="https://go.microsoft.com/fwlink/p/?linkid=850627" target="_blank">admin center</a>, go to the **Groups** > **Shared mailboxes** page. 
-
-::: moniker-end
+1. In the admin center, go to **Teams & groups** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=2066847" target="_blank">Shared mailboxes</a>.
 
 2. Select the shared mailbox you want to edit, then select **Members** \> **Customize permissions**.
 
@@ -238,23 +130,7 @@ To learn more about litigation hold, see [Create a Litigation Hold](../../compli
 
 If you choose not to show the shared mailbox in the global address list, the mailbox won't appear in your organization's address list, but it will still receive email sent to it. 
 
-::: moniker range="o365-worldwide"
-
-1. In the admin center, go to the **Groups** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=2066847" target="_blank">Shared mailboxes</a> page.
-
-::: moniker-end 
-
-::: moniker range="o365-germany"
-
-1. In the <a href="https://go.microsoft.com/fwlink/p/?linkid=848041" target="_blank">admin center</a>, go to the **Groups** > **Shared mailboxes** page. 
-
-::: moniker-end
-
-::: moniker range="o365-21vianet"
-
-1. In the <a href="https://go.microsoft.com/fwlink/p/?linkid=850627" target="_blank">admin center</a>, go to the **Groups** > **Shared mailboxes** page. 
-
-::: moniker-end
+1. In the admin center, go to **Teams & groups** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=2066847" target="_blank">Shared mailboxes</a>.
 
 2. Select the shared mailbox you want to edit, then select **Show in global address list** \> **Edit**.
 
@@ -265,14 +141,10 @@ If you choose not to show the shared mailbox in the global address list, the mai
 > [!NOTE]
 > Hiding a shared mailbox from address list will make it impossible for new shared mailbox members to add the hidden mailbox to their Outlook profile until the shared mailbox is again shown in the address list. 
 
-## Related articles
+## Related content
 
-[About shared mailboxes](about-shared-mailboxes.md)
-
-[Create a shared mailbox](create-a-shared-mailbox.md)
-
-[Convert a user mailbox to a shared mailbox](convert-user-mailbox-to-shared-mailbox.md)
-
-[Remove a license from a shared mailbox](remove-license-from-shared-mailbox.md)
-
-[Resolve issues with shared mailboxes](resolve-issues-with-shared-mailboxes.md)
+[About shared mailboxes](about-shared-mailboxes.md) (article)\
+[Create a shared mailbox](create-a-shared-mailbox.md) (article)\
+[Convert a user mailbox to a shared mailbox](convert-user-mailbox-to-shared-mailbox.md) (article)\
+[Remove a license from a shared mailbox](remove-license-from-shared-mailbox.md) (article)\
+[Resolve issues with shared mailboxes](resolve-issues-with-shared-mailboxes.md) (article)

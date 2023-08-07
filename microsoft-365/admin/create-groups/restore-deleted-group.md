@@ -1,25 +1,30 @@
 ---
 title: "Restore a deleted Microsoft 365 group"
 ms.reviewer: arvaradh
+ms.date: 02/18/2020
 f1.keywords: CSH
 ms.author: mikeplum
 author: MikePlumleyMSFT
-manager: serdars
+manager: scotv
 audience: Admin
 ms.topic: article
-ms.service: o365-administration
-localization_priority: Normal
+ms.service: microsoft-365-business
+ms.localizationpriority: medium
 ms.collection: 
+- Tier2
+- scotvorg
 - M365-subscription-management 
 - Adm_O365
 - Adm_TOC
-ms.custom: AdminSurgePortfolio
+ms.custom: 
+- AdminSurgePortfolio
+- AdminTemplateSet
 search.appverid:
 - BCS160
 - MET150
 - MOE150
 ms.assetid: b7c66b59-657a-4e1a-8aa0-8163b1f4eb54
-description: "Learn how to restore a deleted Microsoft 365 group."
+description: "A deleted group is retained for 30 days and you can still restore the group. After 30 days, the group and its content are permanently deleted."
 ---
 
 # Restore a deleted Microsoft 365 group
@@ -42,7 +47,9 @@ When a group is restored, the following content is restored:
     
 - Teams
 
-- Yammer group and group content (If the Microsoft 365 group was created from Yammer)
+- Viva Engage group and group content (If the Microsoft 365 group was created from Viva Engage)
+
+- Power BI [Classic workspace](/power-bi/collaborate-share/service-create-workspaces)
 
 > [!NOTE]
 > This article describes restoring only Microsoft 365 groups. All other groups cannot be restored once deleted.
@@ -74,14 +81,16 @@ If you are a global administrator or a groups administrator, you can restore a d
 
 ## Got questions about Microsoft 365 Groups?
 
-Visit the [Microsoft Tech Community](https://techcommunity.microsoft.com/t5/Office-365-Groups/ct-p/Office365Groups) to post questions and participate in conversations about Microsoft 365 groups. 
+Visit the [Microsoft Tech Community](https://techcommunity.microsoft.com/t5/microsoft-365-groups/bd-p/Microsoft365Groups) to post questions and participate in conversations about Microsoft 365 groups. 
   
-## Related articles
+## Related topics
 
-[Manage Microsoft 365 Groups with PowerShell](../../enterprise/manage-microsoft-365-groups-with-powershell.md)
-  
-[Delete groups using the Remove-UnifiedGroup cmdlet](/powershell/module/exchange/remove-unifiedgroup)
-  
-[Manage your group-connected team site settings](https://support.microsoft.com/office/8376034d-d0c7-446e-9178-6ab51c58df42)
-  
-[Delete a group in Outlook](https://support.microsoft.com/office/ca7f5a9e-ae4f-4cbe-a4bc-89c469d1726f)
+[Restore deleted email conversations](/Exchange/recipients-in-exchange-online/restore-deleted-items-group)
+
+[Manage Microsoft 365 Groups with PowerShell](../../enterprise/manage-microsoft-365-groups-with-powershell.md) 
+
+[Delete groups using the Remove-UnifiedGroup cmdlet](/powershell/module/exchange/remove-unifiedgroup) 
+
+[Manage your group-connected team site settings](https://support.microsoft.com/office/8376034d-d0c7-446e-9178-6ab51c58df42) 
+
+[Delete a group in Outlook](https://support.microsoft.com/office/ca7f5a9e-ae4f-4cbe-a4bc-89c469d1726f) 

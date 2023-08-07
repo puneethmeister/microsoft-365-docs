@@ -1,73 +1,77 @@
 ---
-title: Configure and validate exclusions for Microsoft Defender ATP for Linux
-description: Provide and validate exclusions for Microsoft Defender ATP for Linux. Exclusions can be set for files, folders, and processes.
-keywords: microsoft, defender, atp, linux, exclusions, scans, antivirus
-search.product: eADQiWindows 10XVcnh
-search.appverid: met150
-ms.prod: m365-security
+title: Configure and validate exclusions for Microsoft Defender for Endpoint on Linux
+description: Provide and validate exclusions for Microsoft Defender for Endpoint on Linux. Exclusions can be set for files, folders, and processes.
+keywords: microsoft, defender, Microsoft Defender for Endpoint, linux, exclusions, scans, antivirus
+ms.service: microsoft-365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
 ms.author: dansimp
 author: dansimp
-localization_priority: Normal
+ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
 ms.collection: 
-  - m365-security-compliance
+- m365-security
+- tier3
 ms.topic: conceptual
-ms.technology: mde
+ms.subservice: mde
+search.appverid: met150
+ms.date: 12/18/2020
 ---
 
-# Configure and validate exclusions for Microsoft Defender for Endpoint for Linux
+# Configure and validate exclusions for Microsoft Defender for Endpoint on Linux
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
-
 **Applies to:**
-- [Microsoft Defender for Endpoint](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+
+- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://www.microsoft.com/microsoft-365/windows/microsoft-defender-atp?ocid=docs-wdatp-investigateip-abovefoldlink)
+> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-investigateip-abovefoldlink)
 
 This article provides information on how to define exclusions that apply to on-demand scans, and real-time protection and monitoring.
 
 > [!IMPORTANT]
-> The exclusions described in this article don't apply to other Defender for Endpoint for Linux capabilities, including endpoint detection and response (EDR). Files that you exclude using the methods described in this article can still trigger EDR alerts and other detections.
+> The exclusions described in this article don't apply to other Defender for Endpoint on Linux capabilities, including endpoint detection and response (EDR). Files that you exclude using the methods described in this article can still trigger EDR alerts and other detections. For EDR exclusions, [contact support](/microsoft-365/admin/get-help-support).
 
-You can exclude certain files, folders, processes, and process-opened files from Defender for Endpoint for Linux scans.
+You can exclude certain files, folders, processes, and process-opened files from Defender for Endpoint on Linux scans.
 
-Exclusions can be useful to avoid incorrect detections on files or software that are unique or customized to your organization. They can also be useful for mitigating performance issues caused by Defender for Endpoint for Linux.
+Exclusions can be useful to avoid incorrect detections on files or software that are unique or customized to your organization. They can also be useful for mitigating performance issues caused by Defender for Endpoint on Linux.
 
 > [!WARNING]
-> Defining exclusions lowers the protection offered by Defender for Endpoint for Linux. You should always evaluate the risks that are associated with implementing exclusions, and you should only exclude files that you are confident are not malicious.
+> Defining exclusions lowers the protection offered by Defender for Endpoint on Linux. You should always evaluate the risks that are associated with implementing exclusions, and you should only exclude files that you are confident are not malicious.
 
 ## Supported exclusion types
 
-The follow table shows the exclusion types supported by Defender for Endpoint for Linux.
+The follow table shows the exclusion types supported by Defender for Endpoint on Linux.
 
-Exclusion | Definition | Examples
+Exclusion|Definition|Examples
 ---|---|---
-File extension | All files with the extension, anywhere on the device | `.test`
-File | A specific file identified by the full path | `/var/log/test.log`<br/>`/var/log/*.log`<br/>`/var/log/install.?.log`
-Folder | All files under the specified folder (recursively) | `/var/log/`<br/>`/var/*/`
-Process | A specific process (specified either by the full path or file name) and all files opened by it | `/bin/cat`<br/>`cat`<br/>`c?t`
+File extension|All files with the extension, anywhere on the device|`.test`
+File|A specific file identified by the full path|`/var/log/test.log`<br/>`/var/log/*.log`<br/>`/var/log/install.?.log`
+Folder|All files under the specified folder (recursively)|`/var/log/`<br/>`/var/*/`
+Process|A specific process (specified either by the full path or file name) and all files opened by it|`/bin/cat`<br/>`cat`<br/>`c?t`
 
 > [!IMPORTANT]
 > The paths above must be hard links, not symbolic links, in order to be successfully excluded. You can check if a path is a symbolic link by running `file <path-name>`.
 
 File, folder, and process exclusions support the following wildcards:
 
-Wildcard | Description | Example | Matches | Does not match
----|---|---|---|---
-\* |	Matches any number of any characters including none (note that when this wildcard is used inside a path it will substitute only one folder) | `/var/\*/\*.log` | `/var/log/system.log` | `/var/log/nested/system.log`
-? | Matches any single character | `file?.log` | `file1.log`<br/>`file2.log` | `file123.log`
+Wildcard|Description|Examples|
+---|---|---
+\*|Matches any number of any characters including none (note if this wildcard is not used at the end of the path then it will substitute only one folder)| `/var/*/tmp` includes any file in `/var/abc/tmp` and its subdirectories, and `/var/def/tmp` and its subdirectories. It does not include `/var/abc/log` or `/var/def/log` <p> <p> `/var/*/` includes any file in `/var` and its subdirectories. 
+?|Matches any single character|`file?.log` includes `file1.log` and `file2.log`, but not`file123.log`
+> [!NOTE]
+> When using the * wildcard at the end of the path, it will match all files and subdirectories under the parent of the wildcard.
 
 ## How to configure the list of exclusions
 
 ### From the management console
 
-For more information on how to configure exclusions from Puppet, Ansible, or another management console, see [Set preferences for Defender for Endpoint for Linux](linux-preferences.md).
+For more information on how to configure exclusions from Puppet, Ansible, or another management console, see [Set preferences for Defender for Endpoint on Linux](linux-preferences.md).
 
 ### From the command line
 
@@ -87,6 +91,7 @@ Examples:
     ```bash
     mdatp exclusion extension add --name .txt
     ```
+
     ```Output
     Extension exclusion configured successfully
     ```
@@ -96,6 +101,7 @@ Examples:
     ```bash
     mdatp exclusion file add --path /var/log/dummy.log
     ```
+
     ```Output
     File exclusion configured successfully
     ```
@@ -105,6 +111,18 @@ Examples:
     ```bash
     mdatp exclusion folder add --path /var/log/
     ```
+
+    ```Output
+    Folder exclusion configured successfully
+    ```
+
+- Add an exclusion for a second folder:
+
+    ```bash
+    mdatp exclusion folder add --path /var/log/
+    mdatp exclusion folder add --path /other/folder
+    ```
+
     ```Output
     Folder exclusion configured successfully
     ```
@@ -112,15 +130,21 @@ Examples:
 - Add an exclusion for a folder with a wildcard in it:
 
     ```bash
-    mdatp exclusion folder add --path "/var/*/"
+    mdatp exclusion folder add --path "/var/*/tmp"
     ```
 
     > [!NOTE]
-    > This will only exclude paths one level below */var/*, but not folders which are more deeply nested; for example, */var/this-subfolder/but-not-this-subfolder*.
-    
+    > This will only exclude paths below */var/\*/tmp/*, but not folders which are siblings of *tmp*; for example, */var/this-subfolder/tmp*, but not */var/this-subfolder/log*.
+
     ```bash
     mdatp exclusion folder add --path "/var/"
     ```
+    OR
+    ```bash
+    mdatp exclusion folder add --path "/var/*/"
+    ```
+    
+
     > [!NOTE]
     > This will exclude all paths whose parent is */var/*; for example, */var/this-subfolder/and-this-subfolder-as-well*.
 
@@ -133,7 +157,19 @@ Examples:
     ```bash
     mdatp exclusion process add --name cat
     ```
-    ```Output    
+
+    ```Output
+    Process exclusion configured successfully
+    ```
+
+- Add an exclusion for a second process:
+
+    ```bash
+    mdatp exclusion process add --name cat
+    mdatp exclusion process add --name dog
+    ```
+
+    ```Output
     Process exclusion configured successfully
     ```
 
@@ -147,7 +183,7 @@ In the following Bash snippet, replace `test.txt` with a file that conforms to y
 curl -o test.txt https://www.eicar.org/download/eicar.com.txt
 ```
 
-If Defender for Endpoint for Linux reports malware, then the rule is not working. If there is no report of malware, and the downloaded file exists, then the exclusion is working. You can open the file to confirm that the contents are the same as what is described on the [EICAR test file website](http://2016.eicar.org/86-0-Intended-use.html).
+If Defender for Endpoint on Linux reports malware, then the rule is not working. If there is no report of malware, and the downloaded file exists, then the exclusion is working. You can open the file to confirm that the contents are the same as what is described on the [EICAR test file website](http://2016.eicar.org/86-0-Intended-use.html).
 
 If you do not have Internet access, you can create your own EICAR test file. Write the EICAR string to a new text file with the following Bash command:
 
@@ -178,3 +214,4 @@ For example, to add `EICAR-Test-File (not a virus)` (the threat name associated 
 ```bash
 mdatp threat allowed add --name "EICAR-Test-File (not a virus)"
 ```
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]

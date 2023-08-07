@@ -1,15 +1,17 @@
 ---
 title: "Identity and device access for your Microsoft 365 test environment"
-author: JoeDavies-MSFT
+author: kelleyvice-msft
 f1.keywords:
 - NOCSH
-ms.author: josephd
-manager: laurawi
+ms.author: kvice
+manager: scotv
+ms.date: 04/23/2019
 audience: ITPro
 ms.topic: article
-ms.service: o365-solutions
-localization_priority: Normal
+ms.service: microsoft-365-enterprise
+ms.localizationpriority: medium
 ms.collection: 
+- scotvorg
 - M365-subscription-management
 - Strat_O365_Enterprise
 ms.custom:
@@ -36,7 +38,7 @@ To create a test environment that has the common identity and device access conf
 
 [Additional identity Test Lab Guides](m365-enterprise-test-lab-guides.md#identity)
 
-[Identity roadmap](identity-roadmap-microsoft-365.md)
+[Deploy identity](deploy-identity-solution-overview.md)
 
 [Microsoft 365 for enterprise Test Lab Guides](m365-enterprise-test-lab-guides.md)
 

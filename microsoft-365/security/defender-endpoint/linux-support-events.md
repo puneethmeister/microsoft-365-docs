@@ -1,34 +1,37 @@
 ---
-title: Troubleshoot missing events or alerts issues for Microsoft Defender ATP for Linux
-description: Troubleshoot missing events or alerts issues in Microsoft Defender ATP for Linux.
-keywords: microsoft, defender, atp, linux, events
-search.product: eADQiWindows 10XVcnh
-search.appverid: met150
-ms.prod: m365-security
+title: Troubleshoot missing events or alerts issues for Microsoft Defender for Endpoint on Linux
+description: Troubleshoot missing events or alerts issues in Microsoft Defender for Endpoint on Linux.
+keywords: microsoft, defender, Microsoft Defender for Endpoint, linux, events
+ms.service: microsoft-365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
 ms.author: dansimp
 author: dansimp
-localization_priority: Normal
+ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
-mms.collection: 
-  - m365-security-compliance
-  - m365initiative-defender-endpoint
+ms.collection: 
+- m365-security
+- tier3
+ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
-ms.technology: mde
+ms.subservice: mde
+search.appverid: met150
+ms.date: 02/02/2021
 ---
 
-# Troubleshoot missing events or alerts issues for Microsoft Defender for Endpoint for Linux
+# Troubleshoot missing events or alerts issues for Microsoft Defender for Endpoint on Linux
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Applies to:**
 
-- [Microsoft Defender for Endpoint for Linux](microsoft-defender-endpoint-linux.md)
+- [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
+- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 
-This article provides some general steps to mitigate missing events or alerts in the [security center](https://securitycenter.windows.com/) portal.
+This article provides some general steps to mitigate missing events or alerts in the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender portal</a>.
 
 Once **Microsoft Defender for Endpoint** has been installed properly on a device, a _device page_ will be generated in the portal. You can review all recorded events in the timeline tab in the device page, or in advanced hunting page. This section troubleshoots the case of some or all expected events are missing.
 For instance, if all _CreatedFile_ events are missing.
@@ -93,3 +96,4 @@ List the filesystems on the machine with:
 ```bash
 df -Th
 ```
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]

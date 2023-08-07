@@ -8,31 +8,30 @@ ms.sitesec: library
 ms.pagetype: security
 f1.keywords: 
 - NOCSH
-ms.author: deniseb
-author: denisebmsft
-ms.prod: m365-security
-ms.date: 01/29/2021
-localization_priority: Normal
+author: dansimp
+ms.author: dansimp
+ms.service: microsoft-365-security
+ms.date: 06/09/2023
+ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
 ms.collection: 
-- M365-security-compliance
-- m365initiative-defender-office365
+- m365-security
+- tier2
 ms.topic: how-to
 ms.custom: 
 - autoir
-ms.technology: mdo
+ms.subservice: mdo
+appliesto:
+  - ✅ <a href="https://learn.microsoft.com/microsoft-365/security/office-365-security/microsoft-defender-for-office-365-product-overview#microsoft-defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 plan 1 and plan 2</a>
+  - ✅ <a href="https://learn.microsoft.com/microsoft-365/security/defender/microsoft-365-defender" target="_blank">Microsoft 365 Defender</a>
 ---
 
 # How to report false positives/negatives in automated investigation and response capabilities
 
-[!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-**Applies to**
-- [Microsoft Defender for Office 365 plan 2](defender-for-office-365.md)
-- [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
-
-If [automated investigation and response (AIR) capabilities in Office 365](automated-investigation-response-office.md) missed or wrongly detected something, there are steps your security operations team can take to fix it. Such actions include:
+If [automated investigation and response (AIR) capabilities in Office 365](air-about-office.md) missed or wrongly detected something, there are steps your security operations team can take to fix it. Such actions include:
 
 - [Reporting a false positive/negative to Microsoft](#report-a-false-positivenegative-to-microsoft-for-analysis);
 - [Adjusting alerts](#adjust-an-alert-to-prevent-false-positives-from-recurring) (if needed); and
@@ -42,13 +41,13 @@ Use this article as a guide.
 
 ## Report a false positive/negative to Microsoft for analysis
 
-If AIR in Microsoft Defender for Office 365 missed an email message, an email attachment, a URL in an email message, or a URL in an Office file, you can [submit suspected spam, phish, URLs, and files to Microsoft for Office 365 scanning](admin-submission.md).
+If AIR in Microsoft Defender for Office 365 missed an email message, an email attachment, a URL in an email message, or a URL in an Office file, you can [submit suspected spam, phish, URLs, and files to Microsoft for Office 365 scanning](submissions-admin.md).
 
 You can also [Submit a file to Microsoft for malware analysis](https://www.microsoft.com/wdsi/filesubmission).
 
 ## Adjust an alert to prevent false positives from recurring
 
-If an alert is triggered by legitimate use, or the alert is inaccurate, you can [Manage alerts in the Cloud App Security portal](/cloud-app-security/managing-alerts).
+If an alert is triggered by legitimate use, or the alert is inaccurate, you can [Manage alerts in the Defender for Cloud Apps portal](/cloud-app-security/managing-alerts).
 
 If your organization is using [Microsoft Defender for Endpoint](/windows/security/threat-protection) in addition to Office 365, and a file, IP address, URL, or domain is treated as malware on a device, even though it's safe, you can [create a custom indicator with an "Allow" action for your device](/windows/security/threat-protection/microsoft-defender-atp/manage-indicators).
 
@@ -65,21 +64,19 @@ With Threat Explorer, your security operations team can find an email affected b
 
 |Scenario|Undo Options|Learn more|
 |---|---|---|
-|An email message was routed to a user's Junk Email folder|- Move the message to the user's Deleted Items folder<br/>- Move the message to the user's Inbox<br/>- Delete the message|[Find and investigate malicious email that was delivered in Office 365](investigate-malicious-email-that-was-delivered.md)|
-|An email message or a file was quarantined|- Release the email or file<br/>- Delete the email or file|[Manage quarantined messages as an admin](manage-quarantined-messages-and-files.md)|
-|
+|An email message was routed to a user's Junk Email folder|<ul><li>Move the message to the user's Deleted Items folder</li><li>Move the message to the user's Inbox</li><li>Delete the message</li></ul>|[Find and investigate malicious email that was delivered in Office 365](investigate-malicious-email-that-was-delivered.md)|
+|An email message or a file was quarantined|<ul><li>Release the email or file</li><li> Delete the email or file</li></ul>|[Manage quarantined messages as an admin](quarantine-admin-manage-messages-files.md)|
 
 ### Undo an action in the Action center
 
 In the Action center, you can see remediation actions that were taken and potentially undo the action.
 
-1. Go to the Microsoft 365 security center (<https://security.microsoft.com>).
-2. In the navigation pane, select **Action center**.
-3. Select the **History** tab to view the list of completed actions.
-4. Select an item. Its flyout pane opens.
-5. In the flyout pane, select **Undo**. (Only actions that can be undone will have an **Undo** button.)
+1. In the Microsoft 365 Defender portal at <https://security.microsoft.com>, go to the Action center by selecting **Action center**. To go directly to the Action center, use <https://security.microsoft.com/action-center/>.
+2. In the Action center, select the **History** tab to view the list of completed actions.
+3. Select an item. Its flyout pane opens.
+4. In the flyout pane, select **Undo**. (Only actions that can be undone will have an **Undo** button.)
 
 ## See also
 
 - [Microsoft Defender for Office 365](defender-for-office-365.md)
-- [Automated investigations in Microsoft Defender for Office 365](office-365-air.md)
+- [Automated investigations in Microsoft Defender for Office 365](air-about.md)

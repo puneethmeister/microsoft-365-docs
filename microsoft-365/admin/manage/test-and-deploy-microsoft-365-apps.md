@@ -1,132 +1,124 @@
 ---
-title: "Test and deploy Microsoft 365 Apps by partners in the Integrated apps portal"
+title: "Get started with Integrated apps"
 f1.keywords:
 - NOCSH
-ms.author: kwekua
-author: kwekua
+ms.author: efrene
+author: efrene
 manager: scotv
+ms.date: 02/25/2020
 audience: Admin
 ms.topic: article
-ms.service: o365-administration
-localization_priority: Normal
-ms.collection: 
+ms.service: microsoft-365-business
+ms.localizationpriority: medium
+ms.collection:
+- Tier2
+- scotvorg
+- Adm_TOC
 ms.custom: AdminSurgePortfolio
 search.appverid: MET150
 ROBOTS: NOINDEX, NOFOLLOW
-description: "Find, test, and deploy Microsoft and Microsoft partner apps for users and groups in your organization from the Integrated apps portal in the Microsoft 365 admin center."
+description: "An overview of the Integrated apps portal in the Microsoft 365 admin center."
 ---
 
-# Test and deploy Microsoft 365 Apps by partners in the Integrated apps portal
+# Get started with Integrated apps
 
-The Microsoft 365 admin center gives you the flexibility to deploy single store apps, custom business line of apps and  Microsoft 365 partner apps from a single location. The location can be accessed at Microsoft Admin center > Settings > Integrated apps. The ability to find, test, and fully deploy purchased and licensed apps by Microsoft partners from the Integrated apps portal provides the convenience and benefits your organization requires to keep business services updated regularly and running efficiently.
+## What is Integrated Apps
 
-For additional information about purchasing and licensing Microsoft 365 apps from partners for your organization, see [Manage and deploy Microsoft 365 Apps from the Microsoft 365 admin center](https://techcommunity.microsoft.com/t5/microsoft-365-blog/manage-and-deploy-microsoft-365-apps-from-the-microsoft-365/ba-p/1194324).
+Integrated Apps gives you the flexibility to deploy and manage single store apps, bundled apps, and a custom business line of apps from a single location. These apps can be built by Microsoft or by our 3P Microsoft 365 partners. The ability to find, test, and fully deploy purchased and licensed apps by Microsoft partners from the Integrated apps portal provides the convenience and benefits your organization requires to keep business services updated regularly and running efficiently.
 
-For more info on how partners create these apps, see [How to plan a SaaS offer for the commercial marketplace](https://go.microsoft.com/fwlink/?linkid=2158277)
+The Integrated apps portal displays a list of apps that can be accessed by users in your organization. The following apps can be managed via Integrated Apps:
 
-The Integrated apps portal is only accessible to global admins and available to WorldWide customers only. This feature is not available in sovereign and government clouds.
+- Office Add-ins
+- Teams apps that work on Outlook and the Microsoft 365 app (formerly known as Office.com). 
+- Teams Apps that only work on Teams.
+- SPFx apps
+- Web apps: For web apps, you can see two kinds of apps.
+    - SaaS apps that are available in appsource.microsoft.com and can be deployed by admins giving consent on behalf of the organization.
+    - SAML gallery apps that are linked with Office add-ins.
 
-The Integrated apps portal displays a list of apps, which includes single apps and Microsoft 365 apps from partners which are deployed your organization. Only web apps, SPFx apps, Office add-ins and Teams apps are listed. For web apps, we you can see 2 kinds of apps.
+## How to access Integrated Apps
 
-- SaaS apps that are available in appsource.microsoft.com, and can be deployed by admins giving consent on behalf of organization.
-- SAML gallery apps that are linked with office add-ins.
+Integrated Apps can be accessed via the Microsoft 365 Admin Center. Select **Settings**, and then choose **Integrated apps**.
 
-## Manage apps in the Integrated apps portal
+![Integrated Apps home](../../media/new-int-apps.png)
 
-You can manage testing and deployment of purchased and licensed Microsoft 365 Apps from partners.
+## Who can access Integrated Apps
 
-1. In the admin center, in the left nav, choose **Settings**, and then choose **Integrated apps**.
+The Integrated apps portal is available to world-wide customers only and can be accessed by Global Admins, Global Readers, Exchange admins, and Azure Application Admins (made available in May 2023). This feature is not available in sovereign and government clouds.
 
-2. Choose an app with **Status** of **More apps available** to open the **Manage** pane. The status of **more apps available** lets you know that there are more integrations from the ISVs that aren't yet deployed.
+To learn more about these roles, see [Azure AD built-in roles - Microsoft Entra|Microsoft Learn](/azure/active-directory/roles/permissions-reference#all-roles).
 
-3. On the **Overview** tab select **Deploy**. Some apps require you to add users before you can select Deploy.
+## User and group assignments
 
-4. Select  **Users**, choose **Is this a test deployment**, and then choose **Entire organization**, **Specific users/groups** or **Just me**. You can also choose **Test deployment** if you prefer to wait to deploy the app to the entire organization. Specific users or groups can be a Microsoft 365 group, a security group, or a distribution group.
-
-5. Select **Update** and then **Done**. You can now select Deploy on the Overview tab.
-
-6. Review the app information, and then select **Deploy**.
-
-7. Select **Done** on the Deployment completed page and review the details of the test or full deployment on the **Overview** tab.
-
-8. If the app has a status of **Update pending**, you can click on the app to open the Manage pane and update the app.
-
-## Find published apps for testing and full deployment
-
-You can find, test, and fully deploy published apps that don't already appear in the list on the Integrated apps page. By purchasing and licensing the apps from the admin center, you can add Microsoft and Microsoft partner apps to your list from a single location.
-
-1. In the admin center, in the left nav, choose **Settings**, and then choose **Integrated apps**.
-
-2. Select **Get apps** to get a view of the apps.
-
-3. On the **Microsoft 365 Apps** published apps page, select the app you want to deploy by choosing **Get it now**. The apps displayed primarily are Word, PowerPoint, Excel, Outlook add-ins, Teams app and SharePoint apps (built on SharePoint Framework technology). Accept the permissions and select **Continue**.
-
-5. Select **Deploy** at the top of the page next to the message that refers to waiting to be deployed.
-
-    If the app selected is linked to a SaaS offer by an ISV, all the other apps that are part of this linked offer will appear on the Configuration page. If you choose to deploy of all of the apps, select **Next**. Otherwise, select **Edit**, and choose which apps you want deployed. Some apps require you to add users before you can select **Deploy**.
-
-6. Select **Add users**, choose **Is this a test deployment**, and then choose **Entire organization** or **Specific users/groups** or **Just me**.
-
-    Specific users/groups can be a Microsoft 365 group, a security group, or a distributed group. You can also choose **Test deployment** if you prefer to wait to deploy the app to the entire organization.
-
-7. Select **Next** to get to the **Accept permission request** page. The app capabilities and permissions of each of the apps are listed. If the app needs consent, select **Accept permissions**. Only a global administrator can give consent.
-
-8. Select **Next** to review the deployment and choose **Finish deployment**. You can view the deployment from the **Overview** tab by choosing **View this deployment**. In the Microsoft 365 admin center, you can see the status of each deployed app and the date you deployed the app.
+We currently support most groups supported by Azure Active Directory, including Microsoft 365 groups, distribution lists, and security groups. We support users in top-level groups or groups without parent groups, but not users in nested groups or groups that have parent groups. To know more, read the documentation on [Assign users and groups to application](/azure/active-directory/manage-apps/assign-user-or-group-access-portal?pivots=portal).
 
 > [!NOTE]
-> If an app was previously deployed from somewhere other than the Integrated Apps portal, the **Deployment Type** is **Custom.**
+> Non-mail enabled security groups are not currently supported.
 
-## Unsupported scenarios
+In the following example, Sandra, Sheila, and the Sales Department group are assigned to an app or add-in. Because the West Coast Sales Department is a nested group, Bert and Fred aren't assigned to an app or add-in.
 
-You won't be able to deploy a single store app or Microsoft 365 Apps by partner from Integrated apps portal for the following scenarios.
+![Diagram of sales department.](../../media/683094bb-1160-4cce-810d-26ef7264c592.png)
 
-- The same add-in is linked to more than one SaaS offer.
-- The SaaS offer is linked to add-ins, but it does not integrate with Microsoft Graph and no AAD App ID is provided.
-- The SaaS offer is linked to add-ins, but AAD App ID provided for Microsoft Graph integration is shared across multiple SaaS offers.
+### Find out if a group contains nested groups
 
-## Upload custom line of business apps for testing and full deployment
+The easiest way to detect if a group contains nested groups is to view the group contact card within Outlook. If you enter the group name within the **To** field of an email and then select the group name when it resolves, it will show you if it contains users or nested groups. In the example below, the **Members** tab of the Outlook contact card for the Test Group shows no users and only two sub groups.
 
-1. In the admin center, in the left nav, choose **Settings** and then **Integrated apps**.
+![Members tab of Outlook contact card.](../../media/d9db88c4-d752-426c-a480-b11a5b3adcd6.png)
 
-2. Select **Upload custom apps**. Only a custom line of apps for Word, PowerPoint, Excel and Outlook  is supported.
+You can do the opposite query by resolving the group to see if it's a member of any group. In the example below, you can see under the **Membership** tab of the Outlook contact card that Sub Group 1 is a member of the Test Group.
 
-3. Upload the manifest file from your device or add a URL link. Some apps require you to add users before you can select Deploy.
+![Membership tab of the Outlook contact card.](../../media/a9f9b6ab-9c19-4822-9e3d-414ca068c42f.png)
 
-4. Select **Add users**, choose **Is this a test Deployment**, and choose **Entire organization** or **Specific users/groups** or **Just me**.
+Note that you can use the Azure Active Directory Graph API to run queries to find the list of groups within a group. For more information, see [Operations on groups | Graph API reference](/previous-versions/azure/ad/graph/api/groups-operations).
 
-    Specific users/groups can be a Microsoft 365 group, a security group, or a distributed group. You can also choose **Test deployment** if you want to wait to deploy the app to the entire organization.
+## What controls are available on the Integrated Apps portal?
 
-5. Select **Next** to get to the **Accept permission request** page. The app capabilities and permissions of the apps are listed. If the app needs consent, select **Accept permissions**. Only a global administrator can give consent.
+As an admin, the following app/add-in types can be managed from the Integrated apps portal on the Microsoft 365 admin center.
 
-6. Select **Next** to review the deployment and choose **Finish deployment**. You can view the deployment from the **Overview** tab by choosing **View this deployment**.
+|Type|Supported Host Products (any or all)|What can admins control on Integrated Apps portal?|Which admins can access the controls on Integrated Apps portal?|Other admin centers & related actions|
+|---|---|---|---|---|
+|Add-in|Outlook<br/><br/><br/> Word, Excel, PowerPoint|[Deploy/Edit deployed users/Remove deployment](/microsoft-365/admin/manage/office-addins#deploy-your-office-add-ins)|Exchange Admin<br/><br/> Global Admin<br/><br/> Azure Application Admin| Exchange Admin Center for default role assignment policy.<br/><br/>  Microsoft 365 Admin Center > Org Settings for Office Store setting|
+|SPFx App|SharePoint|[Deploy/Remove deployment](/microsoft-365/admin/manage/office-addins#deploy-your-office-add-ins)|Global Admin|SharePoint Admin Center|
+|Web App|N/A|[Deploy/Edit deployed users](/microsoft-365/admin/manage/office-addins#deploy-your-office-add-ins) |Global Admin<br/><br/>Azure Application Admin|Azure Active Directory portal|
+|Teams app (manifest version less than 1.13)|Teams|[Block & Unblock](/microsoft-365/admin/manage/teams-apps-work-only-on-teams)|Global Admin|Go to Teams admin center for default tenant setting, deployment and managing availability|
+|Teams app (manifest version equal to or greater than 1.13)|Outlook<br/><br/> Microsoft 365 App<br/><br/> Teams| [Deploy/Edit deployed users/Remove deployment](/microsoft-365/admin/manage/teams-apps-work-on-outlook-and-m365#deploy-a-teams-app-that-works-on-outlook-and-the-microsoft-365-app-via-the-integrated-apps-portal)<br/><br/> [Block & Unblock](/microsoft-365/admin/manage/teams-apps-work-on-outlook-and-m365#manage-how-users-can-install-teams-apps-on-outlook-and-the-microsoft-365-app) <br/><br/> [Manage availability>Edit users](/microsoft-365/admin/manage/teams-apps-work-on-outlook-and-m365#how-to-manage-the-availability-of-an-app-in-your-organization)<br/><br/> [Default setting for tenant](/microsoft-365/admin/manage/teams-apps-work-on-outlook-and-m365#customize-default-settings-for-teams-apps-that-work-on-outlook-and-the-microsoft-365-app)|Global Admin<br/><br/>Azure Application Admin|Go to Teams admin center to manage how this app shows up in Teams for users in your organization.|
+
+## Other admin centers
+
+You can continue to manage access to Office add-ins and Teams apps via the following settings:
+
+- Org Settings for access to Word, Excel, and PowerPoint Add-ins
+- Exchange admin center for Outlook Add-ins
+- Teams admin center for Teams Apps
+
+You can continue to deploy [Office Add-ins via Integrated Apps](/microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps.md#deploy-an-office-add-in-using-the-admin-center) and [Teams Apps via Teams admin center](/microsoftteams/manage-apps).
 
 ## Frequently asked questions
 
 ### Which administrator role do I need to access Integrated apps?
 
-Only global administrators can access Integrated Apps. Integrated apps won't show up in the left nav for other administrators.
+Only Global Admins, Azure Application Admins and Exchange admins can access Integrated Apps.
+
+- Global admins can edit all controls for all apps and add-ins in Integrated Apps
+- Azure Application admins can edit controls for Teams apps that work on Outlook and the Microsoft 365 app and Office/Outlook add-ins
+- Exchange Admins can edit any controls for Outlook add-ins.
+
+Integrated apps won't show up in the left nav for other administrators.
 
 ### Why do I see Add-in in the left nav under Setting but not Integrated apps?
 
-There could be a few reasons:
-
-- The logged in administrator is an Exchange admininstrator.
-- The customer is in sovereign cloud and Integrated apps experience is available to sovereign cloud customers yet.
-
-### What apps can I deploy from Integrated apps?
-
-Integrated apps allows deployment of Web Apps, Teams app, Excel, PowerPoint, Word, Outlook add-ins, and SPFx apps. For add-ins, Integrated apps supports deployment to Exchange online mailboxes and not on-premises Exchange mailboxes.
+Integrated apps allow deployment of Web Apps, Excel, PowerPoint, Word, Outlook add-ins, SPFx apps and Teams apps that work on Outlook and the Microsoft 365 App. For add-ins, Integrated apps support deployment to Exchange online mailboxes and not on-premises Exchange mailboxes.
 
 ### Can administrators delete or remove apps?
 
-Yes. Global administrators can delete or remove apps.
+Only the admin who deployed the app or add-in or a global admin can delete or remove it.
 
-- Select an app from the list view. On the **Configuration** tab, select which apps to remove.  
+Select an app from the list view. On the Configuration tab, select which apps to remove.
 
 ### Is Integrated apps available in sovereign cloud?
 
-No. Integrated apps aren't available to sovereign cloud customers.
+No. Integrated apps aren't available to sovereign cloud customers at this time.
 
 ### Is Integrated apps available in government clouds?
 
-No. Integrated apps aren't available to government cloud customers.
+No. Integrated apps aren't available to government cloud customers at this time.

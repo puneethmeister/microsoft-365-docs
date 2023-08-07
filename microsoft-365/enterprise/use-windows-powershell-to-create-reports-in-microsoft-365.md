@@ -1,14 +1,16 @@
 ---
 title: "Use PowerShell to create reports for Microsoft 365"
-ms.author: josephd
-author: JoeDavies-MSFT
-manager: laurawi
+ms.author: kvice
+author: kelleyvice-msft
+manager: scotv
 ms.date: 07/17/2020
 audience: ITPro
-ms.topic: hub-page
-ms.service: o365-administration
-localization_priority: Normal
-ms.collection: Ent_O365
+ms.topic: conceptual
+ms.service: microsoft-365-enterprise
+ms.localizationpriority: medium
+ms.collection: 
+- scotvorg
+- Ent_O365
 f1.keywords:
 - CSH
 ms.custom: 
@@ -52,7 +54,7 @@ These articles describe how to use PowerShell for Microsoft 365 to get informati
   - [Use Exchange Online PowerShell to display mailbox](/exchange/recipients-in-exchange-online/manage-user-mailboxes/use-powershell-to-display-mailbox-information)
     
     
-## Related articlesl
+## Related articles
 
 [Manage Microsoft 365 with PowerShell](manage-microsoft-365-with-microsoft-365-powershell.md)
   

@@ -1,10 +1,11 @@
 ---
 title: Overview of custom detections in Microsoft 365 Defender
 description: Understand how you can use advanced hunting to create custom detections and generate alerts
-keywords: advanced hunting, threat hunting, cyber threat hunting, microsoft threat protection, microsoft 365, mtp, m365, search, query, telemetry, custom detections, schema, kusto, microsoft 365, Microsoft Threat Protection
+keywords: advanced hunting, threat hunting, cyber threat hunting, Microsoft 365 Defender, microsoft 365, m365, search, query, telemetry, custom detections, schema, kusto
 search.product: eADQiWindows 10XVcnh
 search.appverid: met150
-ms.prod: m365-security
+ms.service: microsoft-365-security
+ms.subservice: m365d
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
@@ -12,12 +13,14 @@ f1.keywords:
   - NOCSH
 ms.author: maccruz
 author: schmurky
-localization_priority: Normal
+ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
-ms.collection: M365-security-compliance
-ms.topic: article
-ms.technology: m365d
+ms.collection: m
+    - m365-security
+    - tier2
+ms.topic: conceptual
+ms.date: 02/16/2021
 ---
 
 # Custom detections overview
@@ -40,3 +43,4 @@ Custom detections provide:
 - [Create and manage custom detection rules](custom-detection-rules.md)
 - [Advanced hunting overview](advanced-hunting-overview.md)
 - [Migrate advanced hunting queries from Microsoft Defender for Endpoint](advanced-hunting-migrate-from-mde.md)
+[!INCLUDE [Microsoft 365 Defender rebranding](../../includes/defender-m3d-techcommunity.md)]

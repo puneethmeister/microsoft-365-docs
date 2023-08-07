@@ -4,20 +4,23 @@ f1.keywords:
 - NOCSH
 - fwlink 2135143
 - India-only
-ms.author: cmcatee
 author: cmcatee-MSFT
+ms.author: cmcatee
 manager: scotv
+ms.reviewer: drjones, nicholak
 audience: Admin
-ms.topic: article
-ms.service: o365-administration
-localization_priority: Normal
+ms.topic: how-to
+ms.service: microsoft-365-business
+ms.localizationpriority: medium
 ms.collection: 
+- Tier1
+- scotvorg
 - M365-subscription-management
 - Adm_O365
-- Adm_NonTOC
-- commerce
-ms.custom: 
-search.appverid:
+ms.custom:
+- commerce_subscriptions
+- empty
+search.appverid: MET150 
 description: "Learn how to upgrade from Microsoft Teams Free to a new Microsoft 365 for business subscription."
 ROBOTS: NOINDEX, NOFOLLOW
 ms.date: 07/08/2020
@@ -25,17 +28,17 @@ ms.date: 07/08/2020
 # Upgrade from Microsoft Teams Free to Microsoft 365 for business
 
 > [!IMPORTANT]
-> This document only applies to Microsoft Teams Free organizations in India.
+> This article only applies to Microsoft Teams Free organizations in India.
 
 ## Before you begin
 
-You must be a Microsoft Teams Free admin to upgrade a Microsoft Teams Free organization. You're automatically an admin if you created the Microsoft Teams Free organization.
+You must be a Microsoft Teams Free admin to upgrade a Microsoft Teams Free organization. You're automatically an admin if you created the Microsoft Teams Free organization.
 
 ## Step 1: Get your work or school account ID
 
 To begin the process, get your underlying work or school account ID. This account ID is different from the email address that you use to access Microsoft Teams Free.
 
-1. Go to <a href="https://go.microsoft.com/fwlink/p/?linkid=2134797" target="_blank">https://account.activedirectory.windowsazure.com</a>
+1. Go to <a href="https://go.microsoft.com/fwlink/p/?linkid=2134797" target="_blank"><https://account.activedirectory.windowsazure.com></a>
 2. In the header, select the profile icon. Your account ID is displayed below your name, and ends with *.onmicrosoft.com*.\
     Your admin email address will look like *admin@yourfreeorgname.onmicrosoft.com*.
 
@@ -62,7 +65,7 @@ Use the underlying work or school account that you recovered and your new admin 
 
 Now that you have a new Microsoft 365 for business subscription, you can assign licenses to the existing users in your Microsoft Teams Free organization.
 
-1. In the admin center, go to **Users** > <a href="https://go.microsoft.com/fwlink/p/?linkid=834822" target="_blank">Active users</a>.
+1. In the admin center, go to **Users** > <a href="https://go.microsoft.com/fwlink/p/?linkid=834822" target="_blank">**Active users**</a>.
 2. Select the users to whom you want to assign Microsoft 365 for business licenses, then select **Manage product licenses**.
 3. In the **Manage product licenses** pane, select **Replace existing license assignments**.
 4. In the **Replace existing products** pane, find the Microsoft 365 for business product that you bought, and switch the toggle to **On**.

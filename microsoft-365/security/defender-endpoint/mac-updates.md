@@ -1,53 +1,55 @@
 ---
-title: Deploy updates for Microsoft Defender ATP for Mac
-description: Control updates for Microsoft Defender ATP for Mac in enterprise environments.
-keywords: microsoft, defender, atp, mac, updates, deploy
-search.product: eADQiWindows 10XVcnh
-search.appverid: met150
-ms.prod: m365-security
+title: Deploy updates for Microsoft Defender for Endpoint on Mac
+description: Control updates for Microsoft Defender for Endpoint on Mac in enterprise environments.
+keywords: microsoft, defender, Microsoft Defender for Endpoint, mac, updates, deploy, big sur, monterey, ventura, mde for mac
+ms.service: microsoft-365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
 ms.author: dansimp
 author: dansimp
-localization_priority: Normal
+ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
 ms.collection: 
-  - m365-security-compliance
-  - m365initiative-defender-endpoint
+- m365-security
+- tier3
 ms.topic: conceptual
-ms.technology: mde
+ms.subservice: mde
+search.appverid: met150
+ms.date: 12/18/2020
 ---
 
-# Deploy updates for Microsoft Defender for Endpoint for Mac
+# Deploy updates for Microsoft Defender for Endpoint on macOS
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 
 **Applies to:**
 
-- [Microsoft Defender for Endpoint for Mac](microsoft-defender-endpoint-mac.md)
-- [Microsoft Defender for Endpoint](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint on macOS](microsoft-defender-endpoint-mac.md)
+- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://www.microsoft.com/microsoft-365/windows/microsoft-defender-atp?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
 Microsoft regularly publishes software updates to improve performance, security, and to deliver new features.
 
-To update Microsoft Defender for Endpoint for Mac, a program named Microsoft AutoUpdate (MAU) is used. By default, MAU automatically checks for updates daily, but you can change that to weekly, monthly, or manually.
+To update Microsoft Defender for Endpoint on macOS, a program named Microsoft AutoUpdate (MAU) is used. MAU checks updates periodically, and automatically downloads and installs them.
 
-![MAU screenshot](images/MDATP-34-MAU.png)
+:::image type="content" source="images/MDATP-34-MAU.png" alt-text="MAU" lightbox="images/MDATP-34-MAU.png":::
 
-If you decide to deploy updates by using your software distribution tools, you should configure MAU to manually check for software updates. You can deploy preferences to configure how and when MAU checks for updates for the Macs in your organization.
+You can deploy preferences to configure how and when MAU checks for updates for the Macs in your organization.
 
 ## Use msupdate
 
-MAU includes a command-line tool, called *msupdate*, that is designed for IT administrators so that they have more precise control over when updates are applied. Instructions for how to use this tool can be found in [Update Office for Mac by using msupdate](https://docs.microsoft.com/deployoffice/mac/update-office-for-mac-using-msupdate).
+MAU includes a command-line tool, called *msupdate*, that is designed for IT administrators so that they have more precise control over when updates are applied. Instructions for how to use this tool can be found in [Update Office for Mac by using msupdate](/deployoffice/mac/update-office-for-mac-using-msupdate).
 
-In MAU, the application identifier for Microsoft Defender for Endpoint for Mac is *WDAV00*. To download and install the latest updates for Microsoft Defender for Endpoint for Mac, execute the following command from a Terminal window:
+In MAU, the application identifier for Microsoft Defender for Endpoint on macOS is *WDAV00*. To download and install the latest updates for Microsoft Defender for Endpoint on macOS, execute the following command from a Terminal window:
 
-```
+```dos
+cd /Library/Application\ Support/Microsoft/MAU2.0/Microsoft\ AutoUpdate.app/Contents/MacOS
 ./msupdate --install --apps wdav00
 ```
 
@@ -57,121 +59,132 @@ This section describes the most common preferences that can be used to configure
 
 ### Set the channel name
 
-The channel determines the type and frequency of updates that are offered through MAU. Devices in `Beta` can try out new features before devices in `Preview` and `Current`. 
+The channel determines the type and frequency of updates that are offered through MAU. Devices in `Beta` can try out new features before devices in `Preview` and `Current`.
 
 The `Current` channel contains the most stable version of the product.
 
->[!IMPORTANT]
-> Prior to Microsoft AutoUpdate version 4.29, channels had different names: 
-> 
-> - `Beta` was named `InsiderFast` (Insider Fast)
-> - `Preview` was named `External` (Insider Slow)
-> - `Current` was named `Production`
+> [!IMPORTANT]
+> Prior to Microsoft AutoUpdate version 4.29, channels had different names:
+>
+> - `Beta Channel` was named `InsiderFast` (Insider Fast)
+> - `Current Channel` (Preview) was named `External` (Insider Slow)
+> - `Current Channel` was named `Production`
 
->[!TIP]
->In order to preview new features and provide early feedback, it is recommended that you configure some devices in your enterprise to `Beta` or `Preview`.
+> [!TIP]
+> In order to preview new features and provide early feedback, it is recommended that you configure some devices in your enterprise to `Beta` or `Preview`.
 
+<br>
+
+****
+
+|Section|Value|
+|---|---|
+|**Domain**|`com.microsoft.autoupdate2`|
+|**Key**|ChannelName|
+|**Data type**|String|
+|**Possible values**|Beta <p> Preview <p> Current|
 |||
-|:--|:--|
-| **Domain** | com.microsoft.autoupdate2 |
-| **Key** | ChannelName |
-| **Data type** | String |
-| **Possible values** | Beta <br/> Preview <br/> Current |
-|||
 
->[!WARNING]
->This setting changes the channel for all applications that are updated through Microsoft AutoUpdate. To change the channel only for Microsoft Defender for Endpoint for Mac, execute the following command after replacing `[channel-name]` with the desired channel:
+> [!WARNING]
+> This setting changes the channel for all applications that are updated through Microsoft AutoUpdate. To change the channel only for Microsoft Defender for Endpoint on macOS, execute the following command after replacing `[channel-name]` with the desired channel:
+>
 > ```bash
-> defaults write com.microsoft.autoupdate2 Applications -dict-add "/Applications/Microsoft Defender ATP.app" " { 'Application ID' = 'WDAV00' ; 'App Domain' = 'com.microsoft.wdav' ; LCID = 1033 ; ChannelName = '[channel-name]' ; }"
+> defaults write com.microsoft.autoupdate2 Applications -dict-add "/Applications/Microsoft Defender.app" " { 'Application ID' = 'WDAV00' ; 'App Domain' = 'com.microsoft.wdav' ; LCID = 1033 ; ChannelName = '[channel-name]' ; }"
 > ```
 
 ### Set update check frequency
 
 Change how often MAU searches for updates.
 
-|||
-|:--|:--|
-| **Domain** | com.microsoft.autoupdate2 |
-| **Key** | UpdateCheckFrequency |
-| **Data type** | Integer |
-| **Default value** | 720 (minutes) |
-| **Comment** | This value is set in minutes. |
+<br>
+
+****
+
+|Section|Value|
+|---|---|
+|**Domain**|`com.microsoft.autoupdate2`|
+|**Key**|UpdateCheckFrequency|
+|**Data type**|Integer|
+|**Default value**|720 (minutes)|
+|**Comment**|This value is set in minutes. The allowed range is 240 minutes (4 hours) - 720 minutes (12 hours).|
 |||
 
 ### Change how MAU interacts with updates
 
 Change how MAU searches for updates.
 
-|||
-|:--|:--|
-| **Domain** | com.microsoft.autoupdate2 |
-| **Key** | HowToCheck |
-| **Data type** | String |
-| **Possible values** | Manual <br/> AutomaticCheck <br/> AutomaticDownload |
-| **Comment** |  Note that AutomaticDownload will do a download and install silently if possible. |
+<br>
+
+****
+
+|Section|Value|
+|---|---|
+|**Domain**|`com.microsoft.autoupdate2`|
+|**Key**|HowToCheck|
+|**Data type**|String|
+|**Possible values**|Manual <p> AutomaticCheck <p> AutomaticDownload|
+|**Comment**|Note that AutomaticDownload will download and install silently if possible.|
 |||
 
 ### Change whether the "Check for Updates" button is enabled
 
-Change whether local users will be able to click the "Check for Updates" option in the Microsoft AutoUpdate user interface.
+Change whether local users are able to click the "Check for Updates" option in the Microsoft AutoUpdate user interface.
 
-|||
-|:--|:--|
-| **Domain** | com.microsoft.autoupdate2 |
-| **Key** | EnableCheckForUpdatesButton |
-| **Data type** | Boolean |
-| **Possible values** | True (default) <br/> False |
+<br>
+
+****
+
+|Section|Value|
+|---|---|
+|**Domain**|`com.microsoft.autoupdate2`|
+|**Key**|EnableCheckForUpdatesButton|
+|**Data type**|Boolean|
+|**Possible values**|True (default) <p> False|
 |||
 
 ### Disable Insider checkbox
 
 Set to true to make the "Join the Office Insider Program..." checkbox unavailable / greyed out to users.
 
-|||
-|:--|:--|
-| **Domain** | com.microsoft.autoupdate2 |
-| **Key** | DisableInsiderCheckbox |
-| **Data type** | Boolean |
-| **Possible values** | False (default) <br/> True |
-|||
+<br>
 
-### Limit the telemetry that is sent from MAU
+****
 
-Set to false to send minimal heartbeat data, no application usage, and no environment details.
-
-|||
-|:--|:--|
-| **Domain** | com.microsoft.autoupdate2 |
-| **Key** | SendAllTelemetryEnabled |
-| **Data type** | Boolean |
-| **Possible values** | True (default) <br/> False |
+|Section|Value|
+|---|---|
+|**Domain**|`com.microsoft.autoupdate2`|
+|**Key**|DisableInsiderCheckbox|
+|**Data type**|Boolean|
+|**Possible values**|False (default) <p> True|
 |||
 
 ## Example configuration profile
 
 The following configuration profile is used to:
-- Place the device in the Beta channel
+
+- Place the device in the Current channel
 - Automatically download and install updates
 - Enable the "Check for updates" button in the user interface
 - Allow users on the device to enroll into the Insider channels
 
-### JAMF
+> [!WARNING]
+> The below configuration is an example configuration and should not be used in production without proper review of settings and tailor of configurations.
+
+### Jamf Pro
 
 ```XML
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>ChannelName</key>
-	<string>Beta</string>
-	<key>HowToCheck</key>
-	<string>AutomaticDownload</string>
-	<key>EnableCheckForUpdatesButton</key>
-	<true/>
+    <key>ChannelName</key>
+    <string>Current</string>
+    <key>HowToCheck</key>
+    <string>AutomaticDownload</string>
+    <key>EnableCheckForUpdatesButton</key>
+    <true/>
     <key>DisableInsiderCheckbox</key>
     <false/>
-	<key>SendAllTelemetryEnabled</key>
-	<true/>
 </dict>
 </plist>
 ```
@@ -223,15 +236,13 @@ The following configuration profile is used to:
             <key>PayloadEnabled</key>
             <true/>
             <key>ChannelName</key>
-            <string>Beta</string>
+            <string>Current</string>
             <key>HowToCheck</key>
             <string>AutomaticDownload</string>
             <key>EnableCheckForUpdatesButton</key>
             <true/>
             <key>DisableInsiderCheckbox</key>
             <false/>
-            <key>SendAllTelemetryEnabled</key>
-            <true/>
             </dict>
         </array>
     </dict>
@@ -239,9 +250,11 @@ The following configuration profile is used to:
 ```
 
 To configure MAU, you can deploy this configuration profile from the management tool that your enterprise is using:
-- From JAMF, upload this configuration profile and set the Preference Domain to *com.microsoft.autoupdate2*.
+
+- From Jamf Pro, upload this configuration profile and set the Preference Domain to *com.microsoft.autoupdate2*.
 - From Intune, upload this configuration profile and set the custom configuration profile name to *com.microsoft.autoupdate2*.
 
 ## Resources
 
-- [msupdate reference](https://docs.microsoft.com/deployoffice/mac/update-office-for-mac-using-msupdate)
+- [msupdate reference](/deployoffice/mac/update-office-for-mac-using-msupdate)
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]

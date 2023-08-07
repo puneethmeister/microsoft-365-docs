@@ -1,19 +1,24 @@
 ---
 title: "Add or remove members from Microsoft 365 groups"
 ms.reviewer: arvaradh
+ms.date: 02/18/2020
 f1.keywords: NOCSH
 ms.author: mikeplum
 author: MikePlumleyMSFT
-manager: serdars
+manager: scotv
 audience: Admin
 ms.topic: article
-ms.service: o365-administration
-localization_priority: Normal
+ms.service: microsoft-365-business
+ms.localizationpriority: medium
 ms.collection: 
+- Tier2
+- scotvorg
 - M365-subscription-management 
 - Adm_O365
 - Adm_TOC
-ms.custom: AdminSurgePortfolio
+ms.custom: 
+- AdminSurgePortfolio
+- AdminTemplateSet
 search.appverid:
 - MET150
 ms.assetid: e186d224-a324-4afa-8300-0e4fc0c3000a
@@ -96,7 +101,7 @@ By default, the person who created the group is the group owner. Often a group w
 
 5. Select **Save**.
 
-## More on managing membership
+## Next steps
 
 - [Manage groups dynamically in Azure Active Directory](/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal): see the section "How can I manage the membership of a group dynamically?"
 
@@ -104,14 +109,8 @@ By default, the person who created the group is the group owner. Often a group w
 
 - [Assign a new owner to an orphaned group](https://support.microsoft.com/office/86bb3db6-8857-45d1-95c8-f6d540e45732)
 
-## Articles about managing groups
+## Related content
 
-- [Upgrade distribution lists to Microsoft 365 groups in Outlook](../manage/upgrade-distribution-lists.md)
-
-- [Why you should upgrade your distribution lists to groups in Outlook](https://support.microsoft.com/office/7fb3d880-593b-4909-aafa-950dd50ce188)
-
-- [Manage guest access in Microsoft 365 groups](manage-guest-access-in-groups.md)
-
-- [Manage Microsoft 365 groups with PowerShell](../../enterprise/manage-microsoft-365-groups-with-powershell.md): this article introduces you to key cmdlets and provides examples
-
-- [Microsoft 365 groups naming policy](../../solutions/groups-naming-policy.md)
+[Manage guest access in Microsoft 365 groups](manage-guest-access-in-groups.md) (article)\
+[Manage Microsoft 365 groups with PowerShell](../../enterprise/manage-microsoft-365-groups-with-powershell.md): this article introduces you to key cmdlets and provides examples (article)\
+[Microsoft 365 groups naming policy](../../solutions/groups-naming-policy.md) (article)

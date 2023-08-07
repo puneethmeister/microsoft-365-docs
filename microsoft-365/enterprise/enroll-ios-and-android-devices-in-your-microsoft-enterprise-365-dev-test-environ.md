@@ -2,15 +2,17 @@
 title: "Enroll iOS/iPadOS and Android devices in your Microsoft 365 for enterprise test environment"
 f1.keywords:
 - NOCSH
-ms.author: josephd
-author: JoeDavies-MSFT
-manager: laurawi
+ms.author: kvice
+author: kelleyvice-msft
+manager: scotv
 ms.date: 11/19/2020
 audience: ITPro
 ms.topic: article
-ms.service: o365-solutions
-localization_priority: Normal
-ms.collection: M365-identity-device-management
+ms.service: microsoft-365-enterprise
+ms.localizationpriority: medium
+ms.collection: 
+- scotvorg
+- M365-identity-device-management
 ms.custom: Ent_TLGs
 ms.assetid: 49c7758a-1c01-4153-9b63-5eae3f6305ce
 description: Use this Test Lab Guide to enroll devices in your Microsoft 365 test environment and manage them remotely.
@@ -27,7 +29,7 @@ Enrolling iOS/iPadOS and Android devices in your test environment involves three
 - [Phase 2: Enroll your iOS/iPadOS and Android devices](#phase-2-enroll-your-ios-and-android-devices)
 - [Phase 3: Manage your iOS/iPadOS and Android devices remotely](#phase-3-manage-your-ios-and-android-devices-remotely)
 
-![Test Lab Guides for the Microsoft cloud](../media/m365-enterprise-test-lab-guides/cloud-tlg-icon.png)
+![Test Lab Guides for the Microsoft cloud.](../media/m365-enterprise-test-lab-guides/cloud-tlg-icon.png)
   
 > [!TIP]
 > For a visual map to all the articles in the Microsoft 365 for enterprise Test Lab Guide stack, go to [Microsoft 365 for enterprise Test Lab Guide Stack](../downloads/Microsoft365EnterpriseTLGStack.pdf).
@@ -53,7 +55,7 @@ In Intune, there are a few ways to enroll your iOS/iPadOS and Android devices. Y
 If you're ready to use Intune for device management, and want some guidance, then the following information may help:
 
 - [Device management overview](/mem/intune/fundamentals/what-is-device-management)
-- [Tutorial: Walkthrough Intune in Microsoft Endpoint Manager](/mem/intune/fundamentals/tutorial-walkthrough-endpoint-manager)
+- [Tutorial: Walkthrough the Microsoft Intune admin center](/mem/intune/fundamentals/tutorial-walkthrough-endpoint-manager)
 - [Deployment guide: Setup or move to Microsoft Intune](/mem/intune/fundamentals/deployment-guide-intune-setup)
 
 ## Phase 3: Manage your iOS and Android devices remotely

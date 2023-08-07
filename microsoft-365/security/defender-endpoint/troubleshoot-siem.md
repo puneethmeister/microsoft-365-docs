@@ -1,21 +1,23 @@
 ---
-title: Troubleshoot SIEM tool integration issues in Microsoft Defender ATP
-description: Troubleshoot issues that might arise when using SIEM tools with Microsoft Defender ATP.
+title: Troubleshoot SIEM tool integration issues in Microsoft Defender for Endpoint
+description: Troubleshoot issues that might arise when using SIEM tools with Microsoft Defender for Endpoint.
 keywords: troubleshoot, siem, client secret, secret
-search.product: eADQiWindows 10XVcnh
-search.appverid: met150
-ms.prod: m365-security
+ms.service: microsoft-365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
 ms.author: macapara
 author: mjcaparas
-localization_priority: Normal
+ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
-ms.collection: M365-security-compliance
+ms.collection: 
+- m365-security
+- tier3
 ms.topic: troubleshooting
-ms.technology: mde
+ms.subservice: mde
+search.appverid: met150
+ms.date: 12/18/2020
 ---
 
 # Troubleshoot SIEM tool integration issues
@@ -24,21 +26,27 @@ ms.technology: mde
 
 
 **Applies to:**
-- [Microsoft Defender for Endpoint](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
+> [!NOTE]
+> **Try our new APIs using MS Graph security API**. Find out more at: [Use the Microsoft Graph security API - Microsoft Graph | Microsoft Learn](/graph/api/resources/security-api-overview).
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://www.microsoft.com/microsoft-365/windows/microsoft-defender-atp?ocid=docs-wdatp-pullalerts-abovefoldlink) 
+> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-pullalerts-abovefoldlink)
+
+> [!NOTE]
+> The new Microsoft 365 Defender alerts API, released to public preview in MS Graph, is the official and recommended API for customers migrating from the SIEM API. See [Migrate from the MDE SIEM API to the Microsoft 365 Defender alerts API](configure-siem.md).
 
 You might need to troubleshoot issues while pulling detections in your SIEM tools.
 
 This page provides detailed steps to troubleshoot issues you might encounter.
 
-
 ## Learn how to get a new client secret
+
 If your client secret expires or if you've misplaced the copy provided when you were enabling the SIEM tool application,  you'll need to get a new secret.
 
-1. Login to the [Azure management portal](https://portal.azure.com).
+1. Log in to the [Azure management portal](https://portal.azure.com).
 
 2. Select **Azure Active Directory**.
 
@@ -46,17 +54,17 @@ If your client secret expires or if you've misplaced the copy provided when you 
 
 4. Click **App registrations**. Then in the applications list, select the application.
 
-5. Select **Keys** section, then provide a key description and specify the key validity duration.
+5. Select **Certificates & Secrets** section, Click on New Client Secret, then provide a description and specify the validity duration.
 
 6. Click **Save**. The key value is displayed.
 
 7. Copy the value and save it in a safe place.
 
-
 ## Error when getting a refresh access token
+
 If you encounter an error when trying to get a refresh token when using the threat intelligence API or SIEM tools, you'll need to add reply URL for relevant application in Azure Active Directory.
 
-1. Login to the [Azure management portal](https://ms.portal.azure.com).
+1. Log in to the [Azure management portal](https://ms.portal.azure.com).
 
 2. Select **Azure Active Directory**.
 
@@ -68,20 +76,18 @@ If you encounter an error when trying to get a refresh token when using the thre
    - For the European Union: `https://winatpmanagement-eu.securitycenter.windows.com/UserAuthenticationCallback`
    - For the United Kingdom: `https://winatpmanagement-uk.securitycenter.windows.com/UserAuthenticationCallback`
    - For the United States:  `https://winatpmanagement-us.securitycenter.windows.com/UserAuthenticationCallback`.
- 
+
 6. Click **Save**.
 
 ## Error while enabling the SIEM connector application
+
 If you encounter an error when trying to enable the SIEM connector application, check the pop-up blocker settings of your browser. It might be blocking the new window being opened when you enable the capability.
 
-
-
-
->Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://www.microsoft.com/microsoft-365/windows/microsoft-defender-atp?ocid=docs-wdatp-troubleshootsiem-belowfoldlink) 
+> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-troubleshootsiem-belowfoldlink)
 
 ## Related topics
-- [Enable SIEM integration in Microsoft Defender for Endpoint](enable-siem-integration.md)
-- [Configure ArcSight to pull Microsoft Defender for Endpoint detections](configure-arcsight.md)
+
+- [Use the Microsoft Graph security API - Microsoft Graph | Microsoft Learn](/graph/api/resources/security-api-overview)
+
 - [Pull detections to your SIEM tools](configure-siem.md)
-- [Microsoft Defender for Endpoint Detection fields](api-portal-mapping.md)
-- [Pull Microsoft Defender for Endpoint detections using REST API](pull-alerts-using-rest-api.md)
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]

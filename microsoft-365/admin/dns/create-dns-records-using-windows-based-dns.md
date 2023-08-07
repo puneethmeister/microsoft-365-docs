@@ -2,19 +2,24 @@
 title: "Create DNS records for Microsoft using Windows-based DNS"
 f1.keywords:
 - NOCSH
-ms.author: pebaum
-author: pebaum
+ms.author: nkagole
+author: nataliekagole
 manager: scotv
+ms.date: 02/18/2020
 audience: Admin
 ms.topic: article
-ms.service: o365-administration
-localization_priority: Normal
+ms.service: microsoft-365-business
+ms.localizationpriority: medium
 ms.collection: 
+- Tier2
+- scotvorg
 - M365-subscription-management
 - Adm_O365
 - Adm_NonTOC
 - Adm_O365_Setup
-ms.custom: AdminSurgePortfolio
+ms.custom: 
+- AdminSurgePortfolio
+- AdminTemplateSet
 search.appverid:
 - BCS160
 - MET150
@@ -201,3 +206,9 @@ If you're planning to synchronize your on-premises Active Directory with Microso
   
 > [!NOTE]
 >  Typically it takes about 15 minutes for DNS changes to take effect. However, it can occasionally take longer for a change you've made to update across the Internet's DNS system. If you're having trouble with mail flow or other issues after adding DNS records, see [Troubleshoot issues after changing your domain name or DNS records](../get-help-with-domains/find-and-fix-issues.md). 
+
+## Related content
+
+[Transfer a domain from Micrsoft 365 to another host](../get-help-with-domains/transfer-a-domain-from-microsoft-to-another-host.md) (article)\
+[Pilot Microsoft 365 from my custom domain](../misc/pilot-microsoft-365-from-my-custom-domain.md) (article)\
+[Domains FAQ](../setup/domains-faq.yml) (article)

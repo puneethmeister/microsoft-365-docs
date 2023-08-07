@@ -1,10 +1,14 @@
 ---
 manager: dansimp
+ms.date: 09/21/2020
 ms.author: dansimp
 author: dansimp
-ms.prod: m365-security
+ms.service: microsoft-365-security
+ms.subservice: mdo
 ms.topic: include
+ms.custom: admindeeplinkDEFENDER
+search.appverid: met150
 ---
 
-> [!IMPORTANT]
-> The improved [Microsoft 365 security center](https://security.microsoft.com) is now available in public preview. This new experience brings Defender for Endpoint, Defender for Office 365, Microsoft 365 Defender, and more into the Microsoft 365 security center. [Learn what's new](../defender/overview-security-center.md). This topic might apply to both Microsoft Defender for Office 365 and Microsoft 365 Defender. Refer to the **Applies To** section and look for specific call-outs in this article where there might be differences.
+> [!NOTE]
+> Want to experience Microsoft 365 Defender? Learn more about how you can [evaluate and pilot Microsoft 365 Defender](/microsoft-365/security/defender/eval-overview?ocid=cx-docs-MTPtriallab).

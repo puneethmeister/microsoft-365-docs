@@ -6,11 +6,12 @@ manager: laurawi
 ms.date: 07/16/2020
 audience: Admin
 ms.topic: article
-ms.service: o365-administration
-localization_priority: Normal
+ms.service: microsoft-365-enterprise
+ms.localizationpriority: medium
 f1.keywords:
 - CSH
 ms.custom: 
+ms.collection: scotvorg
 search.appverid:
 - MET150
 - MOE150

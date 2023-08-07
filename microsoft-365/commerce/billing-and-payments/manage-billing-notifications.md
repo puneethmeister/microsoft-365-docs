@@ -2,23 +2,27 @@
 title: "Manage billing notifications and invoice attachments"
 f1.keywords:
 - CSH
-ms.author: cmcatee
 author: cmcatee-MSFT
+ms.author: cmcatee
 manager: scotv
+ms.reviewer: emmasheridan, vijayav
 audience: Admin
-ms.topic: article
-ms.service: o365-administration
-localization_priority: Normal
+ms.topic: how-to
+ms.service: microsoft-365-business
+ms.localizationpriority: medium
 ms.collection: 
+- Tier1
+- scotvorg
 - M365-subscription-management
 - Adm_O365
 ms.custom:
+- commerce_billing
 - okr_SMB
 - AdminSurgePortfolio
-- commerce
 search.appverid:
 - MET150
 description: "Learn how to manage who receives billing notification emails and invoice attachments."
+ms.date: 03/17/2021
 ---
 
 # Manage billing notifications and invoice attachments
@@ -31,10 +35,7 @@ You must be a Global admin to do the steps described in this article. Billing ad
 
 ## Change the language you receive email in
 
-> [!NOTE]
-> Billing admins can also do the steps in this section.
-
-Billing notification emails are sent in your organization’s preferred language. To change the preferred language, use the following steps.
+Billing notification emails are sent in your organization's preferred language. To change the preferred language, use the following steps.
 
 1. In the Microsoft 365 admin center, go to the **Billing** > <a href="https://go.microsoft.com/fwlink/p/?linkid=853212" target="_blank">Billing notifications</a> page.
 2. In the **Billing notification settings** section, select **Edit notification settings**.
@@ -49,8 +50,8 @@ Your organization's billing notifications are sent to the primary and alternate 
 1. In the admin center, go to the **Billing** > <a href="https://go.microsoft.com/fwlink/p/?linkid=853212" target="_blank">Billing notifications</a> page.
 2. In the **Admins receiving billing notifications** section, select the **Billing administrator** or **Global administrator** link in the description text.
 3. In the right pane, on the **Assigned admins** tab, select **Add**.
-4. In the **Add admins** pane, type the user’s display name or username, and then select the user from the list of suggestions.
-5. Add multiple users until you’re done.
+4. In the **Add admins** pane, type the user's display name or username, and then select the user from the list of suggestions.
+5. Add multiple users until you're done.
 6. Select **Save**. The user is added to the list of assigned admins.
 
 ### Remove admin roles by using the Billing notifications page
@@ -65,7 +66,7 @@ Your organization's billing notifications are sent to the primary and alternate 
 To change the primary and alternate email address of other admins in your organization, use the following steps.
 
 > [!NOTE]
-> Billing admins can change their own primary and alternate email addresses, but not for other admins.
+> Billing admins can only change their own alternate email address. They can't change email addresses for other admins.
 
 1. In the admin center, go to the **Billing** > <a href="https://go.microsoft.com/fwlink/p/?linkid=853212" target="_blank">Billing notifications</a> page.
 2. In the **Admins receiving billing notifications** section, select a name.
@@ -106,7 +107,7 @@ Billing notification emails are sent to the primary and alternate email addresse
 
 To learn more about billing profile roles and how to manage them, see [Understand Microsoft Customer Agreement administrative roles in Azure](/azure/cost-management-billing/manage/understand-mca-roles).
 
-To change who receives your organization’s billing notifications, use the following steps to change the roles assigned to users.
+To change who receives your organization's billing notifications, use the following steps to change the roles assigned to users.
 
 1. In the admin center, go to the **Billing** > <a href="https://go.microsoft.com/fwlink/p/?linkid=2102895" target="_blank">Bills & payments</a> page.
 2. On the **Billing profile** tab, select a billing profile.
@@ -123,5 +124,6 @@ To receive your invoices as attachments to your invoice notifications, use the f
 ## Related content
 
 [View your bill or invoice](view-your-bill-or-invoice.md) (article)\
+[Billing information for Microsoft 365 for business in Mexico](mexico-billing-info.md) (article) \
 [Understand your bill or invoice for Microsoft 365 for business](understand-your-invoice2.md) (article)\
 [Add users and assign licenses at the same time](../../admin/add-users/add-users.md) (article)

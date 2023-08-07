@@ -1,3 +1,6 @@
+---
+ms.date: 02/18/2020
+---
 > [!div class="op_single_selector"]
 > - **Select your country or region**
 > - [Afghanistan](../support/afghanistan.md)
@@ -45,7 +48,7 @@
 > - [Central African Republic](../support/central-african-republic.md)
 > - [Chad](../support/chad.md)
 > - [Chile](../support/chile.md)
-> - [China (PRC)](../support/china-prc.md)
+> - [China](../support/china-prc.md)
 > - [Christmas Island](../support/christmas-island.md)
 > - [Cocos (Keeling) Islands](../support/cocos-keeling-islands.md)
 > - [Colombia](../support/colombia.md)
@@ -128,7 +131,7 @@
 > - [Liechtenstein](../support/liechtenstein.md)
 > - [Lithuania](../support/lithuania.md)
 > - [Luxembourg](../support/luxembourg.md)
-> - [Macau SAR](../support/macau-sar.md)
+> - [Macao SAR](../support/macau-sar.md)
 > - [Macedonia](../support/macedonia.md)
 > - [Madagascar](../support/madagascar.md)
 > - [Malawi](../support/malawi.md)
@@ -156,7 +159,7 @@
 > - [Nepal](../support/nepal.md)
 > - [Netherlands](../support/netherlands.md)
 > - [New Caledonia](../support/new-caledonia.md)
-> - [New Zealand ](../support/new-zealand.md)
+> - [New Zealand](../support/new-zealand.md)
 > - [Nicaragua](../support/nicaragua.md)
 > - [Niue](../support/niue.md)
 > - [Niger](../support/niger.md)

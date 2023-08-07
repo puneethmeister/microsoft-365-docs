@@ -3,90 +3,72 @@ title: "Let users reset their own passwords"
 f1.keywords:
 - NOCSH
 ms.author: kwekua
-author: kwekua
+author: kwekuako
 manager: scotv
+ms.date: 07/06/2023
 audience: Admin
 ms.topic: article
-ms.service: o365-administration
-localization_priority: Normal
+ms.service: microsoft-365-business
+ms.localizationpriority: medium
 ms.collection: 
+- Tier1
+- scotvorg
+- highpri
 - M365-subscription-management
 - Adm_O365
 - Adm_TOC
 ms.custom:
+- VSBFY23
 - MSStore_Link
 - TRN_M365B
 - OKR_SMB_Videos
 - AdminSurgePortfolio
 - okr_smb
-search.appverid:
-- BCS160
-- MET150
-- MOE150
-ms.assetid: 5bc3f460-13cc-48c0-abd6-b80bae72d04a
-description: "Learn how you can reset your passwords using the self-service password reset tool."
+- AdminTemplateSet
+- adminvideo
+- business_assist
+description: "Learn how you can set a policy in the Microsoft 365 admin center to allow users to reset their own passwords using the self-service password reset tool."
 ---
 
 # Let users reset their own passwords
 
-As the Microsoft 365 admin, you can let people use the [self-service password reset tool](https://go.microsoft.com/fwlink/p/?LinkId=522677) so you don't have to reset passwords for them. Less work for you!
-  
+Check out all of our small business content on [Small business help & learning](https://go.microsoft.com/fwlink/?linkid=2224585).
+
+Check out [Microsoft 365 small business video help](https://go.microsoft.com/fwlink/?linkid=2197659) on YouTube.
+
+This article is for people who set password expiration policy for a business, school, or nonprofit. You can let people use the [self-service password reset tool](https://go.microsoft.com/fwlink/p/?LinkId=522677) so you don't have to reset passwords for them. Less work for you!
+
+To complete these steps, you must be a [global admin or password administrator](about-admin-roles.md).
+
+> [!TIP]
+> If you need help with the steps in this topic, consider [working with a Microsoft small business specialist](https://go.microsoft.com/fwlink/?linkid=2186871). With Business Assist, you and your employees get around-the-clock access to small business specialists as you grow your business, from onboarding to everyday use.
+
 ## Before you begin
   
 - You get self-service password reset for cloud users **free** with any Microsoft 365 business, education, or nonprofit paid plan. It doesn't work with Microsoft 365 trial.
 
-- It uses Azure. You'll automatically get this feature in Azure for **free** when you do these steps. It won't cost you anything to turn on self-service password reset if you don't use other Azure features.
+- It uses Azure. You'll automatically get this feature in Azure for **free** when you do these steps. It won't cost you anything to turn on self-service password reset.
 
-- **If you're using an on-premises Active Directory**, the above two points don't apply. Rather, you can set this up but **it requires a paid subscription to Azure AD Premium**.
-
-This article is for people who set password expiration policy for a business, school, or nonprofit. To complete these steps, you need to sign in with your Microsoft 365 admin account. [What's an admin account?](https://docs.microsoft.com/microsoft-365/business-video/admin-center-overview)
-
-You must be an [global admin or password administrator](about-admin-roles.md) to perform these steps.
+- **If you're using an on-premises Active Directory**, you can set this up but **it requires a paid subscription to Azure AD Premium**.
 
 ## Watch: Let users reset their own passwords
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE3AY8S]
+Check out this video and others on our [YouTube channel](https://go.microsoft.com/fwlink/?linkid=2198214).
 
-If you found this video helpful, check out the [complete training series for small businesses and those new to Microsoft 365](https://support.microsoft.com/office/6ab4bbcd-79cf-4000-a0bd-d42ce4d12816).
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE3AY8S]
 
 ## Steps: Let people reset their own passwords
 
-These steps turn on self-service password reset for everyone in your business.
-  
-::: moniker range="o365-worldwide"
-
-1. In the <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">admin center</a>, go to the **Settings** > **Org settings** page.
-
-::: moniker-end
-
-::: moniker range="o365-germany"
-
-1. In the <a href="https://go.microsoft.com/fwlink/p/?linkid=848041" target="_blank">admin center</a>, go to the **Settings** \> **Security &amp; privacy** page.
-
-::: moniker-end
-
-::: moniker range="o365-21vianet"
-
-1. In the <a href="https://go.microsoft.com/fwlink/p/?linkid=850627" target="_blank">admin center</a>, go to the **Settings** \>**Settings** \> **Security &amp; privacy** page.
-
-::: moniker-end
-
-2. At the top of the **Org settings** page, select the **Security & Privacy** tab.
-  
-3. Select **Self-service Password Reset**.
-
-4. Under **Self-service password reset**, select **Go to the Azure portal to turn on self-service password reset**.
-
-5. In the left navigation pane, select **Users**, and then, on the **Users | All users** page, select **Password reset**.
-  
-6. On the **Properties** page, select **All** to enable it for everyone in your business, and then select **Save**.
-  
-7. When your users sign in, they will be prompted to enter additional contact information that will help them reset their password in the future.
+1. In the Microsoft 365 admin center, in the left navigation pane, select **Settings** > **Org settings**, and then <a href="https://go.microsoft.com/fwlink/p/?linkid=2072756" target="_blank">**Security & privacy**</a>.
+1. Select **Self-service password reset**, and then choose **Go to the Azure portal to turn on self-service password reset**.
+1. In the left navigation pane, select **Users**, and then **Users - all users**
+1. Select **Password reset**.
+1. Select **All** to enable self-service password reset for all your users, or choose **Selected** to specify **Groups** you want, and then select **Save**.
+1. On the **Password reset | Properties** page, select **Authentication methods** and select the **Number of methods required to reset** and desired **Methods available to users**, and then select **Save**.
+1. When your users sign in, they will be prompted to enter additional contact information that will help them reset their password in the future.
 
 ## Related content
 
-[Set the password expiration policy for your organization](../manage/set-password-expiration-policy.md)
-
-[Set an individual user's password to never expire](set-password-to-never-expire.md)
-
-[Microsoft 365 Business training videos](https://support.microsoft.com/office/6ab4bbcd-79cf-4000-a0bd-d42ce4d12816)
+[Set the password expiration policy for your organization](../manage/set-password-expiration-policy.md) (article)\
+[Set an individual user's password to never expire](set-password-to-never-expire.md) (article)\
+[Microsoft 365 Business training videos](../../business-video/index.yml) (link page)

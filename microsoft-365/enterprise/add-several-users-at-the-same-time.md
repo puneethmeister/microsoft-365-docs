@@ -1,12 +1,13 @@
 ---
 title: "Add several users at the same time to Microsoft 365 - Admin Help"
 ms.author: kwekua
-author: kwekua
+author: kwekuako
 manager: scotv
+ms.date: 08/10/2020
 audience: Admin
 ms.topic: article
-ms.service: o365-administration
-localization_priority: Normal
+ms.service: microsoft-365-enterprise
+ms.localizationpriority: medium
 f1.keywords:
 - CSH
 ms.custom: 
@@ -14,6 +15,10 @@ ms.custom:
 - 'O365P_AddUsersCSV'
 - 'O365M_AddUsersCSV'
 - 'O365E_AddUsersCSV'
+- admindeeplinkMAC
+ms.collection: 
+- Tier1
+- scotvorg
 search.appverid:
 - MET150
 - MOP150
@@ -37,7 +42,7 @@ Each person on your team needs a user account before they can sign in and access
 
 1. Sign in to Microsoft 365 with your work or school account.
 
-2. In the admin center, choose **Users** \> **Active users**.
+2. In the admin center, choose **Users** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=834822" target="_blank">**Active users**</a>.
 
 3. Select **Add multiple users**.
 
@@ -48,12 +53,12 @@ Each person on your team needs a user account before they can sign in and access
     Your spreadsheet also needs to include values for the user name (like bob@contoso.com) and a display name (like Bob Kelly) for each user.
 
   ```
-  User Name,First Name,Last Name,Display Name,Job Title,Department,Office Number,Office Phone,Mobile Phone,Fax,Address,City,State or Province,ZIP or Postal Code,Country or Region
-  chris@contoso.com,Chris,Green,Chris Green,IT Manager,Information Technology,123451,123-555-1211,123-555-6641,123-555-6700,1 Microsoft way,Redmond,Wa,98052,United States
-  ben@contoso.com,Ben,Andrews,Ben Andrews,IT Manager,Information Technology,123452,123-555-1212,123-555-6642,123-555-6700,1 Microsoft way,Redmond,Wa,98052,United States
-  david@contoso.com,David,Longmuir,David Longmuir,IT Manager,Information Technology,123453,123-555-1213,123-555-6643,123-555-6700,1 Microsoft way,Redmond,Wa,98052,United States
-  cynthia@contoso.com,Cynthia,Carey,Cynthia Carey,IT Manager,Information Technology,123454,123-555-1214,123-555-6644,123-555-6700,1 Microsoft way,Redmond,Wa,98052,United States
-  melissa@contoso.com,Melissa,MacBeth,Melissa MacBeth,IT Manager,Information Technology,123455,123-555-1215,123-555-6645,123-555-6700,1 Microsoft way,Redmond,Wa,98052,United States
+  User Name,First Name,Last Name,Display Name,Job Title,Department,Office Number,Office Phone,Mobile Phone,Fax,Alternate email address,Address,City,State or Province,ZIP or Postal Code,Country or Region
+  chris@contoso.com,Chris,Green,Chris Green,IT Manager,Information Technology,123451,123-555-1211,123-555-6641,123-555-6700,chris@contoso.com,1 Microsoft way,Redmond,Wa,98052,United States
+  ben@contoso.com,Ben,Andrews,Ben Andrews,IT Manager,Information Technology,123452,123-555-1212,123-555-6642,123-555-6700,chris@contoso.com,1 Microsoft way,Redmond,Wa,98052,United States
+  david@contoso.com,David,Longmuir,David Longmuir,IT Manager,Information Technology,123453,123-555-1213,123-555-6643,123-555-6700,chris@contoso.com,1 Microsoft way,Redmond,Wa,98052,United States
+  cynthia@contoso.com,Cynthia,Carey,Cynthia Carey,IT Manager,Information Technology,123454,123-555-1214,123-555-6644,123-555-6700,chris@contoso.com,1 Microsoft way,Redmond,Wa,98052,United States
+  melissa@contoso.com,Melissa,MacBeth,Melissa MacBeth,IT Manager,Information Technology,123455,123-555-1215,123-555-6645,123-555-6700,chris@contoso.com,1 Microsoft way,Redmond,Wa,98052,United States
   
   ```
 
@@ -83,11 +88,11 @@ You can download [this sample spreadsheet](https://www.microsoft.com/download/de
   
 Save the file with a new name, and specify CSV format.
   
-![An image of how to save a file in Excel in CSV format](../media/35a86ebe-63ab-4b4d-9a92-e177de33ebae.png)
+![An image of how to save a file in Excel in CSV format.](../media/35a86ebe-63ab-4b4d-9a92-e177de33ebae.png)
   
 When you save the file, you'll probably get a prompt that some features in your workbook will be lost if you save the file in CSV format. This is okay. Click **Yes** to continue.
   
-![A picture of the prompt you might get from Excel asking if you really want to save the file as a CSV format](../media/51032a81-690c-45ef-bfc5-09ea7f790e98.png)
+![A picture of the prompt you might get from Excel asking if you really want to save the file as a CSV format.](../media/51032a81-690c-45ef-bfc5-09ea7f790e98.png)
   
 ### Tips for formatting your spreadsheet
 
@@ -95,7 +100,7 @@ When you save the file, you'll probably get a prompt that some features in your 
 
 - **What if I don't have all the information required for each user?** The user name and display name are required, and you cannot add a new user without this information. If you don't have some of the other information, such as the fax, you can use a space plus a comma to indicate that the field should remain blank.
 
-- **How small or large can the spreadsheet be?** The spreadsheet must have at least two rows. One is for the column headings (the user data column label) and one for the user. You cannot have more than 251 rows. If you need to import more than 250 users, you can create more than one spreadsheet.
+- **How small or large can the spreadsheet be?** The spreadsheet must have at least two rows. One is for the column headings (the user data column label) and one for the user. You cannot have more than 250 rows. If you need to import more than 249 users, you can create more than one spreadsheet.
 
 - **What languages can I use?** When you create your spreadsheet, you can enter user data column labels in any language or characters, but you must not change the order of the labels, as shown in the sample. You can then make entries into the fields, using any language or characters, and save your file in a Unicode or UTF-8 format.
 

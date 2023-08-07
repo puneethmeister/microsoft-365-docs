@@ -1,26 +1,31 @@
 ---
 title: "Overview of Microsoft 365 Groups for administrators"
 ms.reviewer: arvaradh
+ms.date: 02/18/2020
 f1.keywords: NOCSH
 ms.author: mikeplum
 author: MikePlumleyMSFT
-manager: serdars
+manager: scotv
 audience: Admin
 ms.topic: article
-ms.service: o365-administration
-localization_priority: Normal
+ms.service: microsoft-365-business
+ms.localizationpriority: medium
 ms.collection: 
+- Tier2
+- scotvorg
 - M365-subscription-management 
 - Adm_O365
 - Adm_TOC
 ms.custom: 
 - AdminSurgePortfolio
 - okr_smb
+- AdminTemplateSet
+- admindeeplinkMAC
 search.appverid:
 - BCS160
 - MET150
 - MOE150
-description: "Learn about Microsoft 365 Groups."
+description: "With Microsoft 365 Groups, you can drive teamwork across Microsoft 365 by giving a group of people access to a collection of shared resources."
 ---
 
 # Overview of Microsoft 365 Groups for administrators
@@ -33,14 +38,14 @@ Microsoft 365 Groups is the foundational membership service that drives all team
 - A Planner
 - A OneNote notebook
 - Power BI
-- Yammer (if the group was created from Yammer)
+- Viva Engage (if the group was created from Viva Engage)
 - A Team (if the group was created from Teams)
 - Roadmap (if you have Project for the web)
 - Stream
 
 With a Microsoft 365 group, you don't have to manually assign permissions to each of these resources. Adding people to the group automatically gives them the permissions they need.
 
-Any user can create a group unless you [limit group creation to a specific set of people](../../solutions/manage-creation-of-groups.md). If you limit group creation, users who cannot create groups will not be able to create SharePoint sites, Planners, or teams. These services require the people creating them to be able to create a group. Users can still participate in group activities, such as creating tasks in Planner or using Teams chat, provided they are a member of the group.
+Any user can create a group unless you [limit group creation to a specific set of people](../../solutions/manage-creation-of-groups.md). If you limit group creation, users who cannot create groups will not be able to create SharePoint sites, Planners, teams, Outlook group calendars, Stream groups, Viva Engage groups, Shared libraries in OneDrive, or shared Power BI workspaces. These services require the people creating them to be able to create a group. Users can still participate in group activities, such as creating tasks in Planner or using Teams chat, provided they are a member of the group.
 
 Groups have the following roles:
 
@@ -48,7 +53,7 @@ Groups have the following roles:
 - **Members** - Members can access everything in the group, but can't change group settings. By default group members can invite guests to join your group, though you can [control that setting](manage-guest-access-in-groups.md).
 - **Guests** - Group guests are members who are from outside your organization.
 
-Only global admins, user admins, and groups admins can create and manage groups in the Microsoft 365 admin center. You can't be a delegated admin (for example, a consultant who is an admin on behalf of).
+Only global admins, user admins, and groups admins can create and manage groups in the <a href="https://go.microsoft.com/fwlink/p/?linkid=2052855" target="_blank">Microsoft 365 admin center</a>. You can't be a delegated admin (for example, a consultant who is an admin on behalf of).
 
 As an administrator, you can:
 
@@ -72,13 +77,13 @@ The following limits apply to Microsoft 365 Groups:
 |:---------|:----|
 |Owners per group|100|
 |Groups a user can create|250|
-|Groups an admin can create|Up to default tenant limit of 500 K|
-|Number of members|More than 1,000, though only 1,000 can access the Group conversations concurrently. <br>Users might notice delays when accessing the calendar and conversations in large groups in Outlook.|
-|Number of Groups a user can be a member of|7,000|
+|Groups an admin can create|There are no Microsoft 365 group specific limits. There's an overall Azure AD object limit specific to each organization. An Azure AD admin who can manage groups in the organization can create an unlimited number of Microsoft 365 groups up to the Azure AD object limit. See [AAD service limits and restrictions](/azure/active-directory/enterprise-users/directory-service-limits-restrictions).|
+|Number of members|More than 1,000, though only 1,000 can access the group conversations concurrently. <br>Users might notice delays when accessing the calendar and conversations in large groups in Outlook.|
+|Number of groups a user can be an owner of|7,000|
+|Number of groups a user can be a member of|7,000|
 |File storage|1 Terabyte + 10 GB per subscribed user + any other storage purchased. You can purchase an unlimited amount of extra storage.|
 |Group Mailbox size|50 GB|
 
-The default maximum number of Microsoft 365 groups that an organization can have is 500,000. To go beyond the default limit, you must contact Microsoft Support. For more information on Microsoft 365 Groups limits, see [Microsoft 365 Groups - Admin help](https://support.microsoft.com/office/b565caa1-5c40-40ef-9915-60fdb2d97fa2).
 
 Managing your Microsoft 365 groups is more effective when you have actionable information about groups usage. The Microsoft 365 admin center has a reporting tool that lets you see storage use, how many active groups you have, and how users are using the groups. See: [Microsoft 365 Reports in the admin center](../activity-reports/office-365-groups.md) for more information.
 
@@ -112,14 +117,9 @@ Microsoft 365 groups work with Azure Active Directory. The groups features you g
 > For all the groups features, if you have an Azure AD Premium subscription, users can join the group whether or not they have an AAD P1 license assigned to them. Licensing isn't enforced.
 > Periodically we will generate usage reports that tell you which users are missing a license, and need one assigned to them to be compliant with the licensing requirements. For example, let's say a user doesn't have a license and they are added to a group where the naming policy is enforced. The report will flag for you that they need a license.
 
-## Related articles
+## Related content
 
-[Learn about Microsoft 365 Groups](https://support.microsoft.com/office/b565caa1-5c40-40ef-9915-60fdb2d97fa2)
-
-[Upgrade distribution lists to Microsoft 365 Groups](../manage/upgrade-distribution-lists.md)
-
-[Manage Microsoft 365 Groups with PowerShell](../../enterprise/manage-microsoft-365-groups-with-powershell.md)
-
-[SharePoint Online Limits](/office365/servicedescriptions/sharepoint-online-service-description/sharepoint-online-limits)
-
-[Organize groups and channels in Microsoft Stream](/stream/groups-channels-organization)
+[Learn about Microsoft 365 Groups](https://support.microsoft.com/office/b565caa1-5c40-40ef-9915-60fdb2d97fa2) (article)\
+[Manage Microsoft 365 Groups with PowerShell](../../enterprise/manage-microsoft-365-groups-with-powershell.md) (article)\
+[SharePoint Online Limits](/office365/servicedescriptions/sharepoint-online-service-description/sharepoint-online-limits) (article)\
+[Organize groups and channels in Microsoft Stream](/stream/groups-channels-organization) (article)

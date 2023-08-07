@@ -1,31 +1,33 @@
 ---
-title: "Step 1. Increase sign-in security for remote workers with MFA"
+title: "Step 1. Increase sign-in security for hybrid workers with MFA"
 f1.keywords:
 - NOCSH
-author: JoeDavies-MSFT
-ms.author: josephd
-manager: laurawi
+author: dansimp
+ms.author: dansimp
+manager: dansimp
+ms.date: 05/01/2020
 audience: ITPro
 ms.topic: article
-ms.prod: microsoft-365-enterprise
-localization_priority: Priority
+ms.service: o365-solutions
+ms.localizationpriority: high
 ms.collection: 
+- highpri
 - M365-security-compliance
 - Strat_O365_Enterprise
 - remotework
 - m365solution-remotework
 - m365solution-scenario
 ms.custom: 
-description: Require that your remote workers sign in with multi-factor authentication (MFA).
+description: Require that your hybrid workers sign in with multi-factor authentication (MFA).
 ---
 
-# Step 1. Increase sign-in security for remote workers with MFA
+# Step 1. Increase sign-in security for hybrid workers with MFA
 
-To increase the security of sign-ins of your remote workers, use multi-factor authentication (MFA). MFA requires that user sign-ins be subject to an additional verification beyond the user account password. Even if a malicious user determines a user account password, they must also be able to respond to an additional verification, such as a text message sent to a smartphone before access is granted.
+To increase the security of sign-ins of your hybrid workers, use multi-factor authentication (MFA). MFA requires that user sign-ins be subject to an additional verification beyond the user account password. Even if a malicious user determines a user account password, they must also be able to respond to an additional verification, such as a text message sent to a smartphone before access is granted.
 
-![The correct password plus an additional verification results in a successful sign-in](../media/empower-people-to-work-remotely/remote-workers-mfa.png)
+![The correct password plus an additional verification results in a successful sign-in.](../media/empower-people-to-work-remotely/remote-workers-mfa.png)
 
-For all users, including remote workers and especially admins, Microsoft strongly recommends MFA.
+For all users, including hybrid workers and especially admins, Microsoft strongly recommends MFA.
 
 There are three ways to require your users to use MFA based on your Microsoft 365 plan.
 
@@ -33,7 +35,7 @@ There are three ways to require your users to use MFA based on your Microsoft 36
 |---------|---------|
 |All Microsoft 365 plans (without Azure AD Premium P1 or P2 licenses)     |[Enable Security defaults in Azure AD](/azure/active-directory/fundamentals/concept-fundamentals-security-defaults). Security defaults in Azure AD include MFA for users and administrators.   |
 |Microsoft 365 E3 (includes Azure AD Premium P1 licenses)     | Use [Common Conditional Access policies](/azure/active-directory/conditional-access/concept-conditional-access-policy-common) to configure the following policies: <br>- [Require MFA for administrators](/azure/active-directory/conditional-access/howto-conditional-access-policy-admin-mfa) <br>- [Require MFA for all users](/azure/active-directory/conditional-access/howto-conditional-access-policy-all-users-mfa) <br> - [Block legacy authentication](/azure/active-directory/conditional-access/howto-conditional-access-policy-block-legacy)       |
-|Microsoft 365 E5 (includes Azure AD Premium P2 licenses)     | Taking advantage of Azure AD Identity Protection, begin to implement Microsoft's [recommended set of Conditional Access and related policies](../security/office-365-security/identity-access-policies.md) by creating these policies:<br> - [Require MFA when sign-in risk is medium or high](../security/office-365-security/identity-access-policies.md#require-mfa-based-on-sign-in-risk) <br>- [Block clients that don't support modern authentication](../security/office-365-security/identity-access-policies.md#block-clients-that-dont-support-multi-factor)<br>- [High risk users must change password](../security/office-365-security/identity-access-policies.md#high-risk-users-must-change-password)       |
+|Microsoft 365 E5 (includes Azure AD Premium P2 licenses)     |Taking advantage of feature in Azure Active Directory, begin to implement Microsoft's [recommended set of Conditional Access and related policies](../security/office-365-security/identity-access-policies.md) like:<br/> - Requiring MFA when sign-in risk is medium or high. <br/>- Blocking clients that don't support modern authentication. <br/>- Requiring high risk users change their password.|
 | | |
 
 ## Security defaults
@@ -54,7 +56,7 @@ Conditional Access policies are a set of rules that specify the conditions under
 
 This policy allows you to require MFA based on group membership, rather than trying to configure individual user accounts for MFA when they are assigned or unassigned from these administrator roles.
 
-You can also use Conditional Access policies for more advanced capabilities, such as requiring that the sign-in is done from a compliant device, such as your laptop running Windows 10.
+You can also use Conditional Access policies for more advanced capabilities, such as requiring that the sign-in is done from a compliant device, such as your laptop running Windows 11 or 10.
 
 Conditional Access requires Azure AD Premium P1 licenses, which are included with Microsoft 365 E3 and E5.
 
@@ -96,12 +98,12 @@ Self-Service Password Reset (SSPR) enables users to reset their own passwords wi
 
 ## Sign in to SaaS apps with Azure AD
 
-In addition to providing cloud authentication for users, Azure AD can also be your central way to secure all your apps, whether they’re on-premises, in Microsoft’s cloud, or in another cloud. By [integrating your apps into Azure AD](/azure/active-directory/manage-apps/plan-an-application-integration), you can make it easy for remote workers to discover the applications they need and sign into them securely.
+In addition to providing cloud authentication for users, Azure AD can also be your central way to secure all your apps, whether they’re on-premises, in Microsoft’s cloud, or in another cloud. By [integrating your apps into Azure AD](/azure/active-directory/manage-apps/plan-an-application-integration), you can make it easy for hybrid workers to discover the applications they need and sign into them securely.
 
 ## Admin technical resources for MFA and identity
 
 - [Top 5 ways your Azure AD can help you enable remote work](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/top-5-ways-your-azure-ad-can-help-you-enable-remote-work/ba-p/1144691)
-- [Identity roadmap for Microsoft 365](../enterprise/identity-roadmap-microsoft-365.md)
+- [Identity infrastructure for Microsoft 365](../enterprise/deploy-identity-solution-overview.md)
 - [Azure Academy Azure AD training videos](https://www.youtube.com/watch?v=pN8o0owHfI0&list=PL-V4YVm6AmwUFpC3rXr2i2piRQ708q_ia)
 
 ## Results of Step 1
@@ -114,6 +116,6 @@ After deployment of MFA, your users:
 
 ## Next step
 
-[![Step 2: Provide remote access to on-premises apps and services](../media/empower-people-to-work-remotely/remote-workers-step-grid-2.png)](empower-people-to-work-remotely-remote-access.md)
+[![Step 2: Provide remote access to on-premises apps and services.](../media/empower-people-to-work-remotely/remote-workers-step-grid-2.png)](empower-people-to-work-remotely-remote-access.md)
 
 Continue with [Step 2](empower-people-to-work-remotely-remote-access.md) to provide remote access to on-premises apps and services.

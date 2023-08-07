@@ -4,34 +4,46 @@ ms.reviewer:
 description: Use these code samples, querying several Microsoft Defender for Endpoint APIs.
 keywords: apis, supported apis, advanced hunting, query
 search.product: eADQiWindows 10XVcnh
-ms.prod: m365-security
+ms.service: microsoft-365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
 ms.author: macapara
 author: mjcaparas
-localization_priority: Normal
+ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
-ms.collection: M365-security-compliance
-ms.topic: article
-ms.date: 09/24/2018
-ms.technology: mde
+ms.collection: 
+- m365-security
+- tier3
+- must-keep
+ms.topic: reference
+ms.date: 01/25/2023
+ms.subservice: mde
+ms.custom: api
+search.appverid: met150
 ---
 
 # Microsoft Defender for Endpoint APIs using PowerShell
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
-**Applies to:** [Microsoft Defender for Endpoint](https://go.microsoft.com/fwlink/?linkid=2154037)
+**Applies to:** 
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://www.microsoft.com/microsoft-365/windows/microsoft-defender-atp?ocid=docs-wdatp-exposedapis-abovefoldlink) 
+- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Microsoft Defender for Business](../defender-business/index.yml)
+
+> [!IMPORTANT]
+> Advanced hunting capabilities are not included in Defender for Business. See [Compare Microsoft Defender for Business to Microsoft Defender for Endpoint Plans 1 and 2](../defender-business/compare-mdb-m365-plans.md#compare-defender-for-business-to-defender-for-endpoint-plan-1-and-plan-2).
+
+> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
 [!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
 
 [!include[Improve request performance](../../includes/improve-request-performance.md)]
 
->Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://www.microsoft.com/microsoft-365/windows/microsoft-defender-atp?ocid=docs-wdatp-enablesiem-abovefoldlink)
+> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-enablesiem-abovefoldlink)
 
 Full scenario using multiple APIs from Microsoft Defender for Endpoint.
 
@@ -45,18 +57,18 @@ In this section, we share PowerShell samples to
 ## Preparation instructions
 
 - Open a PowerShell window.
-- If your policy does not allow you to run the PowerShell commands, you can run the below command:
+- If your policy doesn't allow you to run the PowerShell commands, you can run the below command:
   ```
   Set-ExecutionPolicy -ExecutionPolicy Bypass
   ```
 
-For more information, see [PowerShell documentation](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/set-executionpolicy)
+For more information, see [PowerShell documentation](/powershell/module/microsoft.powershell.security/set-executionpolicy)
 
 ## Get token
 
 Run the below:
 
-- $tenantId: ID of the tenant on behalf of which you want to run the query (i.e., the query will be run on the data of this tenant)
+- $tenantId: ID of the tenant on behalf of which you want to run the query (that is, the query is run on the data of this tenant)
 - $appId: ID of your AAD app (the app must have 'Run advanced queries' permission to Defender for Endpoint)
 - $appSecret: Secret of your Azure AD app
 
@@ -128,3 +140,4 @@ $response
 - [Microsoft Defender for Endpoint APIs](apis-intro.md)
 - [Advanced Hunting API](run-advanced-query-api.md)
 - [Advanced Hunting using Python](run-advanced-query-sample-python.md)
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]

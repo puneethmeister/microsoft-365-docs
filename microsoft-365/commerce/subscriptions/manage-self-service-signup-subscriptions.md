@@ -2,22 +2,25 @@
 title: "Manage self-service sign-up subscriptions"
 f1.keywords:
 - NOCSH
-ms.author: cmcatee
 author: cmcatee-MSFT
+ms.author: cmcatee
 manager: scotv
+ms.reviewer: mijeffer, nicholak
 audience: Admin
-ms.topic: article
-ms.service: o365-administration
-localization_priority: Normal
+ms.topic: how-to
+ms.service: microsoft-365-business
+ms.localizationpriority: medium
 ms.collection: 
+- Tier1
+- scotvorg
 - M365-subscription-management 
 - Adm_O365
-- commerce
-- Adm_NonTOC
-ms.custom: AdminSurgePortfolio
-search.appverid:
-- MET150
+ms.custom: 
+- commerce_subscriptions 
+- AdminSurgePortfolio
+search.appverid: MET150
 description: "Learn how to manage free self-service sign-up subscriptions for your organization."
+ms.date: 03/17/2021
 ---
 # Manage self-service sign-up subscriptions
 
@@ -32,7 +35,7 @@ There are a limited number of free self-service sign-up subscriptions available 
 
 ## How are these subscriptions different from self-service purchase subscriptions?
 
-Self-service sign-up subscriptions are free and are available for a larger list of products than self-service purchase subscriptions. When a user signs up for a self-service purchase subscription, they're responsible for paying for it. Self-service purchase subscriptions are only available for Power Platform products (Power BI, Power Apps, and Power Automate), Project, and Visio. For more information, see [Self-service purchase FAQ](self-service-purchase-faq.md).
+Self-service sign-up subscriptions are free and are available for a larger list of products than self-service purchase subscriptions. When a user signs up for a self-service purchase subscription, they're responsible for paying for it. Self-service purchase subscriptions are only available for Power Platform products (Power BI, Power Apps, and Power Automate), Project, and Visio. For more information, see [Self-service purchase FAQ](self-service-purchase-faq.yml).
 
 ## Block users from signing up
 

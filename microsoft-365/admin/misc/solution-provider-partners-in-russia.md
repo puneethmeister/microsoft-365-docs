@@ -5,10 +5,11 @@ f1.keywords:
 ms.author: loreenl
 author: LoreenLa
 manager: pamgreen
+ms.date: 02/18/2020
 audience: Admin
 ms.topic: article
-ms.service: o365-administration
-localization_priority: Normal
+ms.service: microsoft-365-business
+ms.localizationpriority: medium
 ms.collection:
 - Adm_O365
 - Adm_NonTOC
@@ -22,10 +23,9 @@ description: "Get a list of Microsoft Cloud Solutions providers in Russia."
 ---
 
 # Microsoft Cloud Solution Provider Partners in Russia
-Here is a list of Microsoft Cloud Solution Providers in Russia.
+Here's a list of Microsoft Cloud Solution Providers in Russia.
   
 - [Mont](https://www.mont.com/ru-ru/)
     
 - [Softline](https://softline.ru/)
     
-

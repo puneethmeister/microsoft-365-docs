@@ -1,16 +1,17 @@
 ---
 title: "Set up your network for Microsoft 365"
-ms.author: josephd
-author: JoeDavies-MSFT
-manager: laurawi
-ms.date: 11/19/2019
+ms.author: kvice
+author: kelleyvice-msft
+manager: scotv
+ms.date: 08/10/2020
 audience: ITPro
-ms.topic: hub-page
-ms.service: o365-solutions
-localization_priority: Normal
+ms.topic: conceptual
+ms.service: microsoft-365-enterprise
+ms.localizationpriority: medium
 search.appverid:
 - MET150
 ms.collection: 
+- scotvorg
 - M365-subscription-management
 - Strat_O365_Enterprise
 f1.keywords:
@@ -26,7 +27,7 @@ description: Find links to articles with information to help you set up your net
 
 *This article applies to both Microsoft 365 Enterprise and Office 365 Enterprise.*
 
-An important part of your Microsoft 365 onboarding is to ensure that your network and Internet connections are set up for optimized access. Configuring your on-premises network to access a globally distributed Software-as-a-Service (SaaS) cloud is different from a traditional network that is optimized for traffic to on-premises datacenters and a central Internet connection. 
+An important part of your Microsoft 365 onboarding is to ensure that your network and Internet connections are set up for optimized access. Configuring your on-premises network to access a globally distributed Software-as-a-Service (SaaS) cloud is different from a traditional network that is optimized for traffic to on-premises datacenters and a central Internet connection.
 
 Use these articles to understand the key differences and to modify your edge devices, client computers, and on-premises network to get the best performance for your on-premises users.
 
@@ -42,11 +43,11 @@ For advice on enhancing performance, see [Network planning and performance tunin
 
 ## Support Microsoft 365 networking as a network equipment vendor
 
-If you are a network equipment vendor, join the [Office 365 Networking Partner Program](microsoft-365-networking-partner-program.md). Enroll in the program to build Office 365 network connectivity principles into your products and solutions. 
+If you are a network equipment vendor, join the [Office 365 Networking Partner Program](microsoft-365-networking-partner-program.md). Enroll in the program to build Office 365 network connectivity principles into your products and solutions.
 
 ## Office 365 endpoints
 
-Endpoints are the set of destination IP addresses, DNS domain names, and URLs for Office 365 traffic on the Internet. 
+Endpoints are the set of destination IP addresses, DNS domain names, and URLs for Office 365 traffic on the Internet.
 
 To optimize performance to Office 365 cloud-based services, some endpoints need special handling by your client browsers and the devices in your edge network. These devices include firewalls, SSL Break and Inspect and packet inspection devices, and data loss prevention systems.
 
@@ -60,7 +61,6 @@ There are currently five different Office 365 clouds. This table takes you to th
 | [U.S. Government DoD endpoints](microsoft-365-u-s-government-dod-endpoints.md) | The endpoints for United States Department of Defense (DoD) subscriptions. |
 | [U.S. Government GCC High endpoints](microsoft-365-u-s-government-gcc-high-endpoints.md) | The endpoints for United States Government Community Cloud High (GCC High) subscriptions. |
 | [Office 365 operated by 21Vianet endpoints](urls-and-ip-address-ranges-21vianet.md) | The endpoints for Office 365 operated by 21Vianet, which is designed to meet the needs for Office 365 in China. |
-| [Office 365 Germany endpoints](microsoft-365-germany-endpoints.md) | The endpoints for a separate cloud in Europe for the most regulated customers in Germany, the European Union (EU), and the European Free Trade Association (EFTA). |
 |||
 
 To automate getting the latest list of endpoints for your Office 365 cloud, see the [Office 365 IP Address and URL Web service](microsoft-365-ip-web-service.md).
@@ -69,7 +69,6 @@ For additional endpoints, see these articles:
 
 - [Additional endpoints not included in the Web service](additional-office365-ip-addresses-and-urls.md)
 - [Network requests in Office 2016 for Mac](network-requests-in-office-2016-for-mac.md)
-
 
 ## Additional topics for Microsoft 365 networking
 
@@ -81,9 +80,9 @@ See these articles for specialized topics in Microsoft 365 networking:
 
 ## ExpressRoute for Microsoft 365
 
-See these articles for information on the use of ExpressRoute for Office 365 traffic:
+See these articles for information on the use of ExpressRoute for Microsoft 365 traffic:
 
-- [Azure ExpressRoute for Office 365](azure-expressroute.md)
-- [Implementing ExpressRoute for Office 365](implementing-expressroute.md)
-- [Network planning with ExpressRoute for Office 365](network-planning-with-expressroute.md)
-- [Routing with ExpressRoute for Office 365](routing-with-expressroute.md)
+- [Azure ExpressRoute for Microsoft 365](azure-expressroute.md)
+
+> [!NOTE]
+> We **do not recommend** ExpressRoute for Microsoft 365 because it does not provide the best connectivity model for the service in most circumstances. As such, Microsoft authorization is required to use this connectivity model. We review every customer request and authorize ExpressRoute for Microsoft 365 only in the rare scenarios where it is necessary. Please read the [ExpressRoute for Microsoft 365 guide](https://aka.ms/erguide) for more information and following a comprehensive review of the document with your productivity, network, and security teams, work with your Microsoft account team to submit an exception if needed.

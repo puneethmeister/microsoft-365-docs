@@ -1,21 +1,24 @@
 ---
 title: "Choose the domain to use when creating Microsoft 365 groups"
 ms.reviewer: arvaradh
+ms.date: 02/18/2020
 f1.keywords: NOCSH
 ms.author: mikeplum
 author: MikePlumleyMSFT
 manager: serdars
 audience: Admin
 ms.topic: article
-ms.service: o365-administration
-localization_priority: Normal
+ms.service: o365-solutions
+ms.localizationpriority: medium
 ms.collection: 
+- highpri
 - M365-subscription-management 
 - Adm_O365
 - m365solution-collabgovernance
 search.appverid:
 - MET150
 ms.assetid: 7cf5655d-e523-4bc3-a93b-3ccebf44a01a
+recommendations: false
 description: "Learn to choose the domain to use when creating Microsoft 365 groups by configuring email address policies using PowerShell."
 ---
 
@@ -25,7 +28,7 @@ Some organizations use separate email domains to segment different parts of thei
   
 If your organization needs users to create their groups in domains other than the default accepted domain of your business, you can allow this by configuring email address policies (EAPs) using PowerShell.
 
-Before you can run the PowerShell cmdlets, download and install a module that will let you talk to your organization. Check out [Connect to Exchange Online using remote PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
+Before you can run the PowerShell cmdlets, download and install a module that will let you talk to your organization. Check out [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
 ## Example scenarios
 
@@ -71,14 +74,15 @@ Let's say you want to control what sub-domains Microsoft 365 groups are created 
   ```
   New-EmailAddressPolicy -Name OtherGroups -IncludeUnifiedGroupRecipients -EnabledPrimarySMTPAddressTemplate "SMTP:@groups.contoso.com" -Priority 3
   ```
-
+> [!NOTE]
+> This scenario does not work when the MX record points to third-party spam filtering.
+ 
 ## Change email address policies
 
 To change the priority or email address templates for an existing EAP, use the Set-EmailAddressPolicy cmdlet.
   
 ```
-Set-EmailAddressPolicy -Name StudentsGroups -EnabledEmailAddressTemplates "SMTP:@students.groups.contoso.com","smtp:@groups.contoso.com", "smtp:@students.contoso.com" ManagedByFilter {Department -eq 'Students'} -Priority 2
-
+Set-EmailAddressPolicy -Name StudentsGroups -EnabledEmailAddressTemplates "SMTP:@students.groups.contoso.com","smtp:@groups.contoso.com", "smtp:@students.contoso.com"
 ```
 
 Changing an EAP has no impact on the groups that have already been provisioned.
@@ -113,10 +117,10 @@ There are a few more things to know:
     
 - A maximum limit of 100 email address policies can be configured for an organization.
     
-## Related articles
+## Related content
 
-[Collaboration governance planning step-by-step](collaboration-governance-overview.md#collaboration-governance-planning-step-by-step)
+[Collaboration governance planning recommendations](collaboration-governance-overview.md#collaboration-governance-planning-recommendations) (article)
 
-[Create your collaboration governance plan](collaboration-governance-first.md)
+[Create your collaboration governance plan](collaboration-governance-first.md) (article)
 
-[Create an Microsoft 365 group in the admin center](../admin/create-groups/create-groups.md)
+[Create a Microsoft 365 group in the admin center](../admin/create-groups/create-groups.md) (article)

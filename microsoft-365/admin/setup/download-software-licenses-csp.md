@@ -2,25 +2,30 @@
 title: "Download perpetual software and product license keys bought through the Cloud Solution Provider (CSP) program"
 f1.keywords:
 - NOCSH
-ms.author: cmcatee
 author: cmcatee-MSFT
+ms.author: cmcatee
 manager: scotv
+ms.reviewer: mijeffer, nicholak
 audience: Admin
-ms.topic: article
-ms.service: o365-administration
-localization_priority: Normal
+ms.topic: how-to
+ms.service: microsoft-365-business
+ms.localizationpriority: medium
 ms.collection: 
+- Tier1
+- scotvorg
 - M365-subscription-management 
 - Adm_O365
 - Adm_TOC
-search.appverid:
-- MET150
+search.appverid: MET150
 ms.custom:
+- commerce_licensing
 - AdminSurgePortfolio
+- admindeeplinkMAC
 description: Learn how to download the software and product license keys for perpetual software bought through the Cloud Solution Provider (CSP) program.
+ms.date: 04/26/2023
 ---
 
-# Download perpetual software and product license keys
+# Download perpetual software and product license keys in Microsoft 365
 
 This article explains how to download software and product license keys for perpetual software bought through the Cloud Solution Provider (CSP) program.
 
@@ -36,3 +41,14 @@ You must be a Global admin to do the steps in this article. For more information
 4. To download the key, select **Copy key to clipboard**.
 5. In the right pane, select **Copy**, then close the pane.
 6. Paste the key in a file in a secure location and then enter it as instructed during the software installation. The key is needed to activate the downloaded software.
+
+## Download Dual Use Rights keys
+
+Dual Use Rights keys are a benefit of some specific Dynamics 365 subscription licenses.
+
+1. In the Microsoft 365 admin center, go to the **Billing** > <a href="https://go.microsoft.com/fwlink/p/?linkid=842054" target="_blank">Your products</a> page.
+2. Choose the Dynamics 365 Service that has a Dual Use Right key.
+3. On the subscription details page, in the **Registration Keys** section, select the version to download.
+    > [!NOTE]
+    > If the product only has one version to download, you can't select other versions.
+4. To download the installation file, select **Download Software**. To download the activation file, select **Download License Key**.

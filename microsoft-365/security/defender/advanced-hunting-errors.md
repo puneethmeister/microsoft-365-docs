@@ -1,10 +1,11 @@
 ---
 title: Handle errors in advanced hunting for Microsoft 365 Defender
 description: Understand errors displayed when using advanced hunting
-keywords: advanced hunting, threat hunting, cyber threat hunting, microsoft threat protection, microsoft 365, mtp, m365, search, query, telemetry, schema, kusto, timeout, resources, errors, unknown error, limits, quota, parameter, allocation
+keywords: advanced hunting, threat hunting, cyber threat hunting, Microsoft 365 Defender, microsoft 365, m365, search, query, telemetry, schema, kusto, timeout, resources, errors, unknown error, limits, quota, parameter, allocation
 search.product: eADQiWindows 10XVcnh
 search.appverid: met150
-ms.prod: m365-security
+ms.service: microsoft-365-security
+ms.subservice: m365d
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
@@ -12,19 +13,23 @@ f1.keywords:
   - NOCSH
 ms.author: maccruz
 author: schmurky
-localization_priority: Normal
+ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
 ms.collection: 
-  - M365-security-compliance
-  - m365initiative-m365-defender
-ms.topic: article
-ms.technology: m365d
+- m365-security
+- tier3
+ms.topic: conceptual
+ms.date: 02/16/2021
 ---
 
 # Handle advanced hunting errors
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender.md)]
+
+
+**Applies to:**
+- Microsoft 365 Defender
 
 
 Advanced hunting displays errors to notify for syntax mistakes and whenever queries hit [predefined quotas and usage parameters](advanced-hunting-limits.md). Refer to the table below for tips on how to resolve or avoid errors.
@@ -39,8 +44,11 @@ Advanced hunting displays errors to notify for syntax mistakes and whenever quer
 | Excessive resource consumption | The query has consumed excessive amounts of resources and has been stopped from completing. In some cases, advanced hunting identifies the specific operator that wasn't optimized. | [Optimize the query](advanced-hunting-best-practices.md) | -`Query stopped due to excessive resource consumption.`<br>-`Query stopped. Adjust use of the <operator name> operator to avoid excessive resource consumption.` |
 | Unknown errors | The query failed because of an unknown reason. | Try running the query again. Contact Microsoft through the portal if queries continue to return unknown errors. | `An unexpected error occurred during query execution. Please try again in a few minutes.`
 
+
+
 ## Related topics
 - [Advanced hunting best practices](advanced-hunting-best-practices.md)
 - [Quotas and usage parameters](advanced-hunting-limits.md)
 - [Understand the schema](advanced-hunting-schema-tables.md)
 - [Kusto Query Language overview](/azure/data-explorer/kusto/query/)
+[!INCLUDE [Microsoft 365 Defender rebranding](../../includes/defender-m3d-techcommunity.md)]

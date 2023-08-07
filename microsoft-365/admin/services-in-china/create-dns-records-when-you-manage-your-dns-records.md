@@ -2,14 +2,17 @@
 title: "Create DNS records for Office 365 when you manage your DNS records"
 f1.keywords:
 - CSH
-ms.author: pebaum
-author: pebaum
+ms.author: nkagole
+author: nataliekagole
 manager: scotv
+ms.date: 02/18/2020
 audience: Admin
 ms.topic: article
-ms.service: o365-administration
-localization_priority: Normal
+ms.service: microsoft-365-business
+ms.localizationpriority: medium
 ms.collection: 
+- Tier2
+- scotvorg
 - M365-subscription-management 
 - Adm_O365
 - Adm_NonTOC

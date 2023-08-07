@@ -1,27 +1,28 @@
 ---
 title: Manage incidents in Microsoft 365 Defender
 description: Learn how to assign, update the status,
-keywords: incident, incidents, alerts, correlated alerts, assign, update, status, manage, classification, microsoft, 365, m365
-search.product: eADQiWindows 10XVcnh
-ms.prod: m365-security
+keywords: incident, incidents, attack story, analyze, response, alerts, correlated alerts, assign, update, status, manage, classification, microsoft, 365, m365
+ms.service: microsoft-365-security
+ms.subservice: m365d
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
 f1.keywords: 
   - NOCSH
-ms.author: josephd
-author: JoeDavies-MSFT
-localization_priority: Normal
+ms.author: diannegali
+author: diannegali
+ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
 ms.collection: 
-  - M365-security-compliance
-  - m365initiative-m365-defender
+  - m365-security
+  - tier1
+ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
 search.appverid: 
   - MOE150
   - MET150
-ms.technology: m365d
+ms.date: 05/18/2023
 ---
 
 # Manage incidents in Microsoft 365 Defender
@@ -32,49 +33,93 @@ ms.technology: m365d
 **Applies to:**
 - Microsoft 365 Defender
 
+Incident management is critical to ensuring that incidents are named, assigned, and tagged to optimize time in your incident workflow and more quickly contain and address threats.
 
+You can manage incidents from **Incidents & alerts > Incidents** on the quick launch of the Microsoft 365 Defender portal ([security.microsoft.com](https://security.microsoft.com)). Here's an example.
 
-Managing incidents is critical in ensuring that threats are contained and addressed. In Microsoft 365 Defender, you have access to managing incidents on devices, users, and mailboxes. 
+:::image type="content" source="../../media/incidents-queue/incidents-ss-incidents2.png" alt-text="The Incidents page in the Microsoft 365 Defender portal" lightbox="../../media/incidents-queue/incidents-ss-incidents2.png":::
 
+Here are the ways you can manage your incidents:
 
-You can manage incidents by selecting an incident from the **Incidents queue**. 
+- [Edit the incident name](#edit-the-incident-name)
+- [Add incident tags](#add-incident-tags)
+- [Assign the incident to a user account](#assign-an-incident)
+- [Resolve them](#resolve-an-incident)
+- [Specify its classification](#specify-the-classification)
+- [Add comments](#add-comments)
 
-You can edit the name of an incident, resolve it, set its classification and determination. You can also assign the incident to yourself, add incident tags and comments.
+You can manage incidents from the **Manage incident** pane for an incident. Here's an example.
 
-In cases where while investigating you would like to move alerts from one incident to another you can also do so from the Alerts tab, thus creating a larger or smaller incident that include all relevant alerts.
+:::image type="content" source="../../media/incidents-queue/incidents-ss-incidents-manage2.png" alt-text="The Manage incident pane in the Microsoft 365 Defender portal" lightbox="../../media/incidents-queue/incidents-ss-incidents-manage2.png":::
 
-## Edit incident name
-Incidents are automatically assigned a name based on alert attributes such as the number of endpoints affected, users affected, detection sources or categories. This allows you to quickly understand the scope of the incident.
+You can display this pane from the **Manage incident** link on the:
 
-For example: *Multi-stage incident on multiple endpoints reported by multiple sources.*
+- **Alert story** page.
+- Properties pane of an incident in the incident queue.
+- **Summary** page of an incident.
+- Manage incident option located on the upper right side of the Incident page.
 
-You can modify the incident name to better align with your preferred naming convention.
+In cases where you want to move alerts from one incident to another, you can also do so from the **Alerts** tab, thus creating a larger or smaller incident that includes all relevant alerts.
+
+## Edit the incident name
+
+Microsoft 365 Defender automatically assigns a name based on alert attributes such as the number of endpoints affected, users affected, detection sources or categories. This allows you to quickly understand the scope of the incident. For example: *Multi-stage incident on multiple endpoints reported by multiple sources.*
+
+You can edit the incident name from the **Incident name** field on the **Manage incident** pane.
 
 > [!NOTE]
-> Incidents that existed prior the rollout of the automatic incident naming feature will retain their name.
-
-
-
-## Assign incidents
-If an incident has not yet been assigned, you can select **Assign to me** to assign the incident to yourself. Doing so assumes ownership of not just the incident, but also all the alerts associated with it.
-
-## Set status and classification
-### Incident status
-You can categorize incidents (as **Active**, or **Resolved**) by changing their status as your investigation progresses. This helps you organize and manage how your team can respond to incidents.
-
-For example, your SOC analyst can review the urgent **Active** incidents for the day, and decide to assign them to herself for investigation.
-
-Alternatively, your SOC analyst might set the incident as **Resolved** if the incident has been remediated. Resolving an incident will automatically close all alerts that are part of the incident and still open. 
-
-### Classification and determination
-You can choose not to set a classification, or decide to specify whether an incident is true or false. Doing so helps the team see patterns and learn from them. 
-
-## Add comments
-You can add comments and view historical events about an incident to see previous changes made to it.
-
-Whenever a change or comment is made to an alert, it is recorded in the Comments and history section.
-
-Added comments instantly appear on the pane.
+> Incidents that existed before the rollout of the automatic incident naming feature will retain their name.
 
 ## Add incident tags
-You can add custom tags to an incident, for example to flag a group of incidents with a common characteristic. You can later filter the incidents queue for all incidents that contain a specific tag.
+
+You can add custom tags to an incident, for example to flag a group of incidents with a common characteristic. You can later filter the incident queue for all incidents that contain a specific tag.
+
+When you start typing, you have the option to select from a list of previously-used and selected tags.
+
+## Assign an incident
+
+If an incident has not yet been assigned, you can select the **Assign to** box and specify the user account. To re-assign an incident, remove the current assignment account by selecting the "x" next to the account name and then select the **Assign to** box. Assigning ownership of an incident assigns the same ownership to all the alerts associated with it.
+
+You can get a list of incidents assigned to you by filtering the incident queue. 
+
+1. From the incident queue, select **Filters**.
+2. in the **Incident assignment** section, clear **Select all** and select **Assigned to me**.
+3. Select **Apply**, and then close the **Filters** pane.
+
+You can then save the resulting URL in your browser as a bookmark to quickly see the list of incidents assigned to you.
+
+## Resolve an incident
+
+If the incident has been remediated, select **Resolve incident** to move the toggle to the right. Note that resolving an incident also resolves all the linked and active alerts related to the incident.
+
+An incident that is not resolved displays as **Active**.
+
+## Specify the classification
+
+From the **Classification** field, you specify whether the incident is:
+
+- **Not set** (the default).
+- **True positive** with a type of threat. Use this classification for incidents that accurately indicate a real threat. Specifying the threat type helps your security team see threat patterns and act to defend your organization from them.
+- **Informational, expected activity** with a type of activity. Use the options in this category to classify incidents for security tests, red team activity, and expected unusual behavior from trusted apps and users.
+- **False positive** for types of incidents that you determine can be ignored because they are technically inaccurate or misleading.
+
+Classifying incidents and specifying their status and type helps tune Microsoft 365 Defender to provide better detection determination over time.
+
+## Add comments
+
+You can add multiple comments to an incident with the **Comment** field. Each comment gets added to the historical events of the incident. You can see the comments and history of an incident from the **Comments and history** link on the **Summary** page.
+
+## Next steps
+
+For new incidents, begin your [investigation](investigate-incidents.md).
+
+For in-process incidents, continue your [investigation](investigate-incidents.md).
+
+For resolved incidents, perform a [post-incident review](first-incident-post.md).
+
+## See also
+
+- [Incidents overview](incidents-overview.md)
+- [Prioritize incidents](incident-queue.md)
+- [Investigate incidents](investigate-incidents.md)
+[!INCLUDE [Microsoft 365 Defender rebranding](../../includes/defender-m3d-techcommunity.md)]

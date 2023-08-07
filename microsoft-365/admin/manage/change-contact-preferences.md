@@ -3,13 +3,17 @@ title: "Change your contact preferences for communications from Microsoft"
 f1.keywords:
 - NOCSH
 ms.author: kwekua
-author: kwekua
+author: kwekuako
 manager: scotv
+ms.date: 02/18/2020
 audience: Admin
 ms.topic: article
-ms.service: o365-administration
-localization_priority: Normal
+ms.service: microsoft-365-business
+ms.localizationpriority: medium
 ms.custom: AdminSurgePortfolio
+ms.collection: 
+- Tier3
+- scotvorg
 search.appverid:
 - BCS160
 - MET150

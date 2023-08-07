@@ -5,11 +5,14 @@ f1.keywords:
 ms.author: efrene
 author: efrene
 manager: scotv
+ms.date: 02/19/2020
 audience: Admin
 ms.topic: article
-ms.service: o365-administration
-localization_priority: Normal
+ms.service: microsoft-365-business
+ms.localizationpriority: medium
 ms.collection: 
+- Tier2
+- scotvorg
 - M365-subscription-management 
 - Adm_O365
 - Adm_TOC
@@ -27,7 +30,7 @@ description: "Learn how usage analytics connects to an API and provides monthly 
 
 ## Data for the Microsoft 365 usage analytics tables
 
-Microsoft 365 usage analytics connects to an API that exposes a multidimensional data model. The APIs that Microsoft 365 usage analytics uses to generate its data are from the various, generally-available, Graph APIs. The function of the Microsoft 365 usage analytics API by itself is not generally available.
+Microsoft 365 usage analytics connects to an API that exposes a multidimensional data model. The APIs that Microsoft 365 usage analytics uses to generate its data are from the various, generally available, Graph APIs. The function of the Microsoft 365 usage analytics API by itself isn't generally available.
   
 > [!NOTE]
 > For more information, see [Working with Microsoft 365 usage reports in Microsoft Graph](/graph/api/resources/report). 
@@ -42,10 +45,10 @@ This API provides information about the monthly trend of usage of the various Mi
 |Tenant Product Activity  <br/> |Contains monthly totals of activities and active user count for various activities within the products.  <br/> See [active user definition](active-user-in-usage-reports.md) for information about the activities within a product that are returned in this data table.  <br/> |Contains monthly aggregated data for a rolling 12-month period including the current partial month.  <br/> |
 |Tenant Office Licenses  <br/> |Contains data about number of Microsoft Office subscriptions assigned to users  <br/> |Contains end-of-month state data for a rolling 12-month period including the current partial month.  <br/> |
 |Tenant Mailbox Usage  <br/> |Contains data about the user's mailbox, for total mailbox count and how storage is used.  <br/> |Contains end-of-month state data for a rolling 12-month period including the current partial month.  <br/> |
-|Tenant Client Usage  <br/> |Contains data about the number of users actively using specific client/devices to connect to Exchange Online, Skype for Business and Yammer.  <br/> |Contains monthly aggregated data for a rolling 12-month period including the current partial month.  <br/> |
+|Tenant Client Usage  <br/> |Contains data about the number of users actively using specific client/devices to connect to Exchange Online, Skype for Business and Viva Engage.  <br/> |Contains monthly aggregated data for a rolling 12-month period including the current partial month.  <br/> |
 |Tenant SharePoint Online Usage  <br/> |Contains data about the SharePoint sites, covering Team or Groups sites such as total number of sites, number of documents on site, file count by activity type and storage used.  <br/> |Contains end-of-month state data for a rolling 12-month period including the current partial month.  <br/> |
 |Tenant OneDrive for Business Usage  <br/> |Contains data about the OneDrive accounts such as number of accounts, number of documents across OneDrives, storage used, file count by activity type.  <br/> |Contains end-of-month state data for a rolling 12-month period including the current partial month.  <br/> |
-|Tenant Microsoft 365 Groups Usage  <br/> |Contains data about Microsoft 365 Groups usage including Mailbox, SharePoint, and Yammer.  <br/> |Contains end-of-month state data for a rolling 12-month period including the current partial month.  <br/> |
+|Tenant Microsoft 365 Groups Usage  <br/> |Contains data about Microsoft 365 Groups usage including Mailbox, SharePoint, and Viva Engage.  <br/> |Contains end-of-month state data for a rolling 12-month period including the current partial month.  <br/> |
 |Tenant Office Activation  <br/> |Contains data about number of Office subscription activations, count of activation per device (Android/iOS/Mac/PC), activations by service plan, for example, Microsoft 365 Apps for enterprise, Visio, Project.  <br/> |Contains end-of-month state data for a rolling 12-month period including the current partial month.  <br/> |
 |User State  <br/> |Contains metadata about users, including user display name, products assigned, location, department, title, company. This data is about users who were assigned a license during the last complete month. Every user is uniquely represented by a user ID.  <br/> |This data is about users that had a license assigned during the last complete month.  <br/> |
 |User Activity  <br/> |Contains per-user level information about activity performed by licensed users.  <br/> See [active user definition](active-user-in-usage-reports.md) for information about the activities within a product that are returned in this data table.  <br/> |This data is about users that performed an activity in any of the services during the last complete month.  <br/> |
@@ -62,26 +65,26 @@ This table provides user level details for all users that have a license assigne
 |Timeframe  <br/> |Month value for which this table has data for.  <br/> |
 |UPN  <br/> |User principal name, uniquely identifies the user to be able to join with other external data sources.  <br/> |
 |DisplayName  <br/> |User's display name.  <br/> |
-|IDType  <br/> |ID type is set to 1 if the user is a Yammer user who connects by using their Yammer ID or 0 if they connect to Yammer by using their Microsoft 365 ID.  <br/> Value is 1 to represent that this user connects to Yammer with their Yammer ID and not their Microsoft 365 ID  <br/> |
-|HasLicenseEXO  <br/> |Set to true if user is assigned a license and enabled to use Exchange.  <br/> |
-|HasLicenseODB  <br/> |Set to true if user is assigned a license and enabled to use OneDrive for Business.  <br/> |
-|HasLicenseSPO  <br/> |Set to true if user is assigned a license and enabled to use SharePoint Online.  <br/> |
-|HasLicenseYAM  <br/> |Set to true if user is assigned a license and enabled to use Yammer.  <br/> |
-|HasLicenseSFB  <br/> |Set to true if user is assigned a license and enabled to use Skype For Business.  <br/> |
-|HasLicenseTeams  <br/> |Set to true if user is assigned a license and enable to use Microsoft Teams.  <br/> |
+|IDType  <br/> |ID type is set to 1 if the user is a Viva Engage user who connects by using their Viva Engage ID or 0 if they connect to Viva Engage by using their Microsoft 365 ID.  <br/> Value is 1 to represent that this user connects to Viva Engage with their Viva Engage ID and not their Microsoft 365 ID  <br/> |
+|HasLicenseEXO  <br/> |Set to true if user is assigned a license and enabled to use Exchange on the last day of the month.  <br/> |
+|HasLicenseODB  <br/> |Set to true if user is assigned a license and enabled to use OneDrive for Business on the last day of the month.  <br/> |
+|HasLicenseSPO  <br/> |Set to true if user is assigned a license and enabled to use SharePoint Online on the last day of the month.  <br/> |
+|HasLicenseYAM  <br/> |Set to true if user is assigned a license and enabled to use Viva Engage on the last day of the month.  <br/> |
+|HasLicenseSFB  <br/> |Set to true if user is assigned a license and enabled to use Skype For Business on the last day of the month.  <br/> |
+|HasLicenseTeams  <br/> |Set to true if user is assigned a license and enable to use Microsoft Teams on the last day of the month.  <br/> |
 |Company  <br/> |Company data represented in Azure Active Directory for this user.  <br/> |
 |Department  <br/> |Department data represented in Azure Active Directory for this user.  <br/> |
 |LocationCity  <br/> |City data represented in Azure Active Directory for this user.  <br/> |
-|LocationCountry  <br/> |Country data represented in Azure Active Directory for this user.  <br/> |
+|LocationCountry  <br/> |Country/region data represented in Azure Active Directory for this user.  <br/> |
 |LocationState  <br/> |State data represented in Azure Active Directory for this user.  <br/> |
 |LocationOffice  <br/> |User's office.  <br/> |
 |Title  <br/> |Title data represented in Azure Active Directory for this user.  <br/> |
 |Deleted  <br/> |True if the user has been deleted from Microsoft 365 in that last complete month.  <br/> |
 |DeletedDate  <br/> |Date when the user was deleted from Microsoft 365.  <br/> |
-|YAM_State  <br/> |States of the user in the Yammer system, can be active, deleted, or suspended.  <br/> |
-|YAM_ActivationDate  <br/> |Date the user entered the state of being active in Yammer.  <br/> |
-|YAM_DeletionDate  <br/> |Date the user entered the state of being deleted in Yammer.  <br/> |
-|YAM_SuspensionDate  <br/> |Date the user entered the state of being suspended in Yammer.  <br/> |
+|YAM_State  <br/> |States of the user in the Viva Engage system, can be active, deleted, or suspended.  <br/> |
+|YAM_ActivationDate  <br/> |Date the user entered the state of being active in Viva Engage.  <br/> |
+|YAM_DeletionDate  <br/> |Date the user entered the state of being deleted in Viva Engage.  <br/> |
+|YAM_SuspensionDate  <br/> |Date the user entered the state of being suspended in Viva Engage.  <br/> |
    
 ### Data table - User Activity
 
@@ -90,7 +93,7 @@ This table contains data about each user who had an activity in any of the servi
 |**Column name**|**Column description**|
 |:-----|:-----|
 |UserID  <br/> |Unique user ID that represents a user and enables joining with other data tables within the data set.  <br/> |
-|IDType  <br/> |ID type is set to 1 if the user is a Yammer user who connects by using their Yammer ID or 0 if they connect to Yammer by using their Microsoft 365 ID.  <br/> Value is 1 to represent that this user connects to Yammer with their Yammer ID and not their Microsoft 365 ID  <br/> |
+|IDType  <br/> |ID type is set to 1 if the user is a Viva Engage user who connects by using their Viva Engage ID or 0 if they connect to Viva Engage by using their Microsoft 365 ID.  <br/> Value is 1 to represent that this user connects to Viva Engage with their Viva Engage ID and not their Microsoft 365 ID  <br/> |
 |Timeframe  <br/> |Month value for which this table represents data for.  <br/> |
 |EXO_EmailSent  <br/> |Number of emails sent.  <br/> |
 |EXO_EmailReceived  <br/> |Number of emails received.  <br/> |
@@ -104,14 +107,14 @@ This table contains data about each user who had an activity in any of the servi
 |ODB_FileSynched  <br/> |Number of files this user synchronized on any OneDrive for Business.  <br/> |
 |ODB_FileSharedInternally  <br/> |Number of files this user shared internally from any OneDrive for Business, or with users within groups (that might include external users).  <br/> |
 |ODB_FileSharedExternally  <br/> |Number of files this user shared externally from any OneDrive for Business.  <br/> |
-|ODB_AccessByOwner  <br/> |Number of files the user interacted with that reside on their own OneDrive for Business.  <br/> |
-|ODB_AccessOthers  <br/> |Number of files this user interacted with which reside on another user's OneDrive for Business.  <br/> |
-|SPO_GroupFileViewedModified  <br/> |Number of files with this user interacted on any group site.  <br/> |
+|ODB_AccessedByOwner  <br/> |Number of sites the user interacted with that reside on their own OneDrive for Business.  <br/> |
+|ODB_AccessedByOthers  <br/> |Number of sites this user interacted with which reside on another user's OneDrive for Business.  <br/> |
+|SPO_GroupFileViewedModified  <br/> |Number of files this user interacted with on any group site.  <br/> |
 |SPO_GroupFileSynched  <br/> |Number of files this user synchronized on any group site.  <br/> |
 |SPO_GroupFileSharedInternally  <br/> |The count of files that have been shared with users within the organization, or with users within groups (that might include external users).  <br/> |
 |SPO_GroupFileSharedExternally  <br/> |Number of files this user shared externally from any group site.  <br/> |
-|SPO_GroupAccessByOwner  <br/> |Number of files the user interacted with that reside on a group site that they own.  <br/> |
-|SPO_GroupAccessByOthers  <br/> |Number of files the user interacted with that reside on a group site that another user owns.  <br/> |
+|SPO_GroupAccessedByOwner  <br/> |Number of sites the user interacted with that reside on a group site that they own.  <br/> |
+|SPO_GroupAccessedByOthers  <br/> |Number of sites the user interacted with that reside on a group site that another user owns.  <br/> |
 |SPO_OtherFileViewedModified  <br/> |Number of files with which this user interacted on any other site.  <br/> |
 |SPO_OtherFileSynched  <br/> |Number of files this user synchronized from any other site.  <br/> |
 |SPO_OtherFileSharedInternally  <br/> |Number of files this user shared internally from any other site, or with users within groups (that might include external users). <br/> |
@@ -122,16 +125,16 @@ This table contains data about each user who had an activity in any of the servi
 |SPO_TeamFileSynched  <br/> |Number of files this user synchronized from any team site.  <br/> |
 |SPO_TeamFileSharedInternally  <br/> |Number of files this user shared internally from any team site, or with users within groups (that might include external users).  <br/> |
 |SPO_TeamFileSharedExternally  <br/> |Number of files this user shared externally from any team site.  <br/> |
-|SPO_TeamAccessByOwner  <br/> |Number of files the user interacted with that reside on a team site that they own.  <br/> |
-|SPO_TeamAccessByOthers  <br/> |Number of files the user interacted with that reside on a team site that another user owns.  <br/> |
+|SPO_TeamAccessedByOwner  <br/> |Number of sites the user interacted with that reside on a team site that they own.  <br/> |
+|SPO_TeamAccessedByOthers  <br/> |Number of sites the user interacted with that reside on a team site that another user owns.  <br/> |
 |Teams_ChatMessages  <br/> |Number of chat messages sent.  <br/> |
 |Teams_ChannelMessage  <br/> |Number of messages posted to channels.  <br/> |
 |Teams_CallParticipate  <br/> |Number of calls the user participated in.  <br/> |
 |Teams_MeetingParticipate  <br/> |Number of meetings the user joined.  <br/> |
 |Teams_HasOtherAction  <br/> |Boolean value if the user performed other actions in Microsoft Teams.  <br/> |
-|YAM_MessagePost  <br/> |Number of Yammer messages this user posted.  <br/> |
-|YAM_MessageLiked  <br/> |Number of Yammer messages this user liked.  <br/> |
-|YAM_MessageRead  <br/> |Number of Yammer messages this user read.  <br/> |
+|YAM_MessagePost  <br/> |Number of Viva Engage messages this user posted.  <br/> |
+|YAM_MessageLiked  <br/> |Number of Viva Engage messages this user liked.  <br/> |
+|YAM_MessageRead  <br/> |Number of Viva Engage messages this user read.  <br/> |
 |SFB_P2PSummary  <br/> |Number of peer-to-peer sessions this user took part in.  <br/> |
 |SFB_ConfOrgSummary  <br/> |Number of conference sessions this user organized.  <br/> |
 |SFB_ConfPartSummary  <br/> |Number of conference sessions this user participated in.  <br/> |
@@ -151,7 +154,7 @@ This table provides month-over-month adoption data in terms of enable, active, r
 |ActiveUsers  <br/> |Number of users who performed an intentional activity in the product for the time-frame value.  <br/> A user is counted as active for a product in a particular month, if they have performed one of the key activities in the product. The key activities are available in the **Tenant Product Activity** table.  <br/> |
 |CumulativeActiveUsers  <br/> |Number of users who are enabled to use a product and have used the product up to the timeframe month at least once since data collection started in the new usage system.  <br/> |
 |MoMReturningUsers  <br/> |Number of users who are active in the timeframe month and also were active in the previous month.  <br/> |
-|FirstTimeUsers  <br/> |Number of users who became active in the timeframe for the first time since data collection in the new usage system.  <br/> A user is counted as a first-time user in a particular month, if we detect their activity for the first time since the beginning of data collection in this new reporting system. Once counted as a first-time user, even if this user has a large gap in their activity they will never be counted again as a first-time user  <br/> |
+|FirstTimeUsers  <br/> |Number of users who became active in the timeframe for the first time since data collection in the new usage system.  <br/> A user is counted as a first-time user in a particular month, if we detect their activity for the first time since the beginning of data collection in this new reporting system. Once counted as a first-time user, even if this user has a large gap in their activity they'll never be counted again as a first-time user  <br/> |
 |Content Date  <br/> |If timeframe shows current month, this value will represent the latest date of the current month for which data is available.  <br/> If Timeframe shows previous month, this value will represent the last date of the timeframe month.  <br/> |
    
 ### Data table - Tenant Product Activity
@@ -170,7 +173,7 @@ This table provides monthly totals of activity and active user count for various
    
 ### Data table - Tenant Mailbox Usage
 
-This table consists of summary data across all licensed Exchange Online users who have a user mailbox. It contains end of month state across all user mailboxes. The data in this table is not additive across multiple months. Latest month's data in this table represents the most recent state.
+This table consists of summary data across all licensed Exchange Online users who have a user mailbox. It contains end of month state across all user mailboxes. The data in this table isn't additive across multiple months. Latest month's data in this table represents the most recent state.
   
 |**Column name**|**Column description**|
 |:-----|:-----|
@@ -189,7 +192,7 @@ This table consists of summary data across all licensed Exchange Online users wh
    
 ### Data table - Tenant Client Usage
 
-This table provides month-over-month summary data about the clients that the users are using to connect to Exchange Online, Skype for Business and Yammer. This table does not yet have client use data for SharePoint Online and OneDrive for Business.
+This table provides month-over-month summary data about the clients that the users are using to connect to Exchange Online, Skype for Business and Viva Engage. This table doesn't yet have client use data for SharePoint Online and OneDrive for Business.
   
 |**Column name**|**Column description**|
 |:-----|:-----|
@@ -264,16 +267,26 @@ This table provides data about how Microsoft 365 Groups is used across the organ
 |SPO_TotalFiles  <br/> |Number of SharePoint files.  <br/> |
 |SPO_ActiveFiles  <br/> |Number of active SharePoint files.  <br/> |
 |SPO_StorageUsed  <br/> |Quantity of SharePoint storage used.  <br/> |
-|YAM_TotalGroups  <br/> |Number of Yammer groups.  <br/> |
-|YAM_ActiveGroups  <br/> |Number of active Yammer groups.  <br/> |
-|YAM_LikedActiveGroups  <br/> |Number of Yammer groups which have like activities.  <br/> |
-|YAM_PostedActiveGroups  <br/> |Number of Yammer groups which have post activities.  <br/> |
-|YAM_ReadActiveGroups  <br/> |Number of Yammer groups which have read activities.  <br/> |
-|YAM_TotalActivities  <br/> |Number of Yammer activities.  <br/> |
-|YAM_LikedActivities  <br/> |Number of Yammer like activities.  <br/> |
-|YAM_PostedActivties  <br/> |Number of Yammer post activities.  <br/> |
-|YAM_ReadActivites  <br/> |Number of Yammer read activities.  <br/> |
-   
+|YAM_TotalGroups  <br/> |Number of Viva Engage groups.  <br/> |
+|YAM_ActiveGroups  <br/> |Number of active Viva Engage groups.  <br/> |
+|YAM_LikedActiveGroups  <br/> |Number of Viva Engage groups which have like activities.  <br/> |
+|YAM_PostedActiveGroups  <br/> |Number of Viva Engage groups which have post activities.  <br/> |
+|YAM_ReadActiveGroups  <br/> |Number of Viva Engage groups which have read activities.  <br/> |
+|YAM_TotalActivities  <br/> |Number of Viva Engage activities.  <br/> |
+|YAM_LikedActivities  <br/> |Number of Viva Engage like activities.  <br/> |
+|YAM_PostedActivties  <br/> |Number of Viva Engage post activities.  <br/> |
+|YAM_ReadActivites  <br/> |Number of Viva Engage read activities.  <br/> |
+
+### Data table - Tenant Office Licenses
+
+This table provides month-over-month summary data about the license assignment for users. 
+  
+|**Column name**|**Column description**|
+|:-----|:-----|
+|LicenseName  <br/> |Name of the license.  <br/> |
+|AssignedCount  <br/> |Number of assigned licenses.  <br/> |
+|Timeframe  <br/> |Month value.  <br/> |
+
 ### Data table - Tenant Office Activation
 
 The table provides data about the number of Office subscription activations across the service plans, for example, Microsoft 365 Apps for enterprises, Visio, Project. It also provides data about number of activations per device (Android/iOS/Mac/PC).
